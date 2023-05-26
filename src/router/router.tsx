@@ -21,7 +21,7 @@ export const resolvedRoutes = resolveAllRoutes(
     path: '/',
     element: <Navigate to="home" />,
   },
-  allRoute,
+  ...allRoute,
   {
     path: '*',
     element: <Page404 />,

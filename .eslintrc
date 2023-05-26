@@ -39,6 +39,7 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/no-empty-function": "warn",
     "import/no-unresolved": "error",
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",

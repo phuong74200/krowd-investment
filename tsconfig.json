@@ -21,14 +21,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     /* Custom */
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
       ]
-      // This mapping @mantine/core
-      // "@mantine/core": [
-      //   "./node_modules/@mantine/core/lib/*"
-      // ]
     },
   },
   "include": [

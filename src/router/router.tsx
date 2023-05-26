@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 
-import ErrorBoundary from '@/modules/error/error-boundary';
+import Page404 from '@/modules/error/pages/page-404';
 import { AuthRouteObject } from '@/types';
 
 import { allRoute } from './routes/all';
@@ -24,7 +24,7 @@ export const resolvedRoutes = resolveAllRoutes(
   allRoute,
   {
     path: '*',
-    element: <ErrorBoundary />,
+    element: <Page404 />,
   }
 );
 

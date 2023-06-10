@@ -1,13 +1,11 @@
-import { Theme } from '@material-ui/core/styles';
-
 // ----------------------------------------------------------------------
 
-export default function Container(theme: Theme) {
+export default function Container() {
   return {
     MuiContainer: {
       styleOverrides: {
-        root: {}
-      }
-    }
+        root: {},
+      },
+    },
   };
 }

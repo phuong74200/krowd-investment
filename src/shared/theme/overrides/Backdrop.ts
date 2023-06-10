@@ -1,4 +1,4 @@
-import { alpha, Theme } from '@material-ui/core/styles';
+import { alpha, Theme } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -14,13 +14,13 @@ export default function Backdrop(theme: Theme) {
             `rgb(22,28,36)`,
             `-moz-linear-gradient(75deg, ${varLow} 0%, ${varHigh} 100%)`,
             `-webkit-linear-gradient(75deg, ${varLow} 0%, ${varHigh} 100%)`,
-            `linear-gradient(75deg, ${varLow} 0%, ${varHigh} 100%)`
+            `linear-gradient(75deg, ${varLow} 0%, ${varHigh} 100%)`,
           ],
           '&.MuiBackdrop-invisible': {
-            background: 'transparent'
-          }
-        }
-      }
-    }
+            background: 'transparent',
+          },
+        },
+      },
+    },
   };
 }

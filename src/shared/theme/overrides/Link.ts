@@ -1,17 +1,15 @@
-import { Theme } from '@material-ui/core/styles';
-
 // ----------------------------------------------------------------------
 
-export default function Link(theme: Theme) {
+export default function Link() {
   return {
     MuiLink: {
       defaultProps: {
-        underline: 'hover'
+        underline: 'hover',
       },
 
       styleOverrides: {
-        root: {}
-      }
-    }
+        root: {},
+      },
+    },
   };
 }

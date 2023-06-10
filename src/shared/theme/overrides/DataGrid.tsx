@@ -1,4 +1,4 @@
-import { Theme } from '@material-ui/core/styles';
+import { Theme } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -9,7 +9,7 @@ export default function DataGrid(theme: Theme) {
         root: {
           borderRadius: 0,
           '& .MuiTablePagination-root': {
-            borderTop: 0
+            borderTop: 0,
           },
           '& .MuiDataGrid-toolbarContainer': {
             padding: theme.spacing(2),
@@ -18,25 +18,25 @@ export default function DataGrid(theme: Theme) {
               marginRight: theme.spacing(1.5),
               color: theme.palette.text.primary,
               '&:hover': {
-                backgroundColor: theme.palette.action.hover
-              }
-            }
-          }
-        }
-      }
+                backgroundColor: theme.palette.action.hover,
+              },
+            },
+          },
+        },
+      },
     },
     MuiGridMenu: {
       styleOverrides: {
         root: {
           '& .MuiDataGrid-gridMenuList': {
             boxShadow: theme.customShadows.z20,
-            borderRadius: theme.shape.borderRadius
+            borderRadius: theme.shape.borderRadius,
           },
           '& .MuiMenuItem-root': {
-            ...theme.typography.body2
-          }
-        }
-      }
-    }
+            ...theme.typography.body2,
+          },
+        },
+      },
+    },
   };
 }

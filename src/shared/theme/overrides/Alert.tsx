@@ -4,10 +4,10 @@ import checkmarkCircle2Fill from '@iconify/icons-eva/checkmark-circle-2-fill';
 import infoFill from '@iconify/icons-eva/info-fill';
 import { Icon } from '@iconify/react';
 // material
-import { Theme } from '@material-ui/core/styles';
+import { Theme } from '@mui/material';
 
 // @types
-import { ColorSchema } from '../../@types/theme';
+import { ColorSchema } from '@/types/theme';
 
 // ----------------------------------------------------------------------
 

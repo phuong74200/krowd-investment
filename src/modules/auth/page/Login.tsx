@@ -6,11 +6,9 @@ import {
   Container,
   Link,
   Stack,
-  Tooltip,
   Typography,
 } from '@mui/material';
 import { styled } from '@mui/system';
-import { capitalCase } from 'change-case';
 
 import MHidden from '@/components/@material-extend/MHidden';
 
@@ -45,8 +43,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
 }));
 
 function Login() {
-  // const { method } = useAuth();
-
   return (
     <RootStyle title="Login | Minimal-UI">
       <AuthLayout>
@@ -81,14 +77,6 @@ function Login() {
                 Enter your details below.
               </Typography>
             </Box>
-
-            <Tooltip title={capitalCase('hehe')}>
-              <Box
-                component="img"
-                src={`/static/auth/ic_${'method'}.png`}
-                sx={{ width: 32, height: 32 }}
-              />
-            </Tooltip>
           </Stack>
 
           <Alert severity="info" sx={{ mb: 3 }}>

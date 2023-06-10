@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Link as RouterLink } from 'react-router-dom';
-import closeFill from '@iconify/icons-eva/close-fill';
 import eyeFill from '@iconify/icons-eva/eye-fill';
 import eyeOffFill from '@iconify/icons-eva/eye-off-fill';
 import { Icon } from '@iconify/react';
@@ -17,10 +16,6 @@ import {
   Stack,
   TextField,
 } from '@mui/material';
-import { closeSnackbar, enqueueSnackbar } from 'notistack';
-
-import { MIconButton } from '@/components/@material-extend';
-import useAuth from '@/hooks/useAuth';
 
 // routes
 import { PATH_AUTH } from '../../../routes/paths';
@@ -34,20 +29,11 @@ type userLoginForm = {
 };
 
 export default function LoginForm() {
-  const { login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit: SubmitHandler<userLoginForm> = async (data) => {
     try {
-      await login(data.username, data.password);
-      enqueueSnackbar('Login success', {
-        variant: 'success',
-        action: (key) => (
-          <MIconButton size="small" onClick={() => closeSnackbar(key)}>
-            <Icon icon={closeFill} />
-          </MIconButton>
-        ),
-      });
+      console.log(data);
     } catch (err) {
       console.error(err);
     }

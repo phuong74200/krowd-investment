@@ -20,7 +20,6 @@ import {
 import { closeSnackbar, enqueueSnackbar } from 'notistack';
 
 import { MIconButton } from '@/components/@material-extend';
-import useAuth from '@/hooks/useAuth';
 
 // routes
 import { PATH_AUTH } from '../../../routes/paths';
@@ -34,12 +33,12 @@ type userLoginForm = {
 };
 
 export default function LoginForm() {
-  const { login } = useAuth();
+  // const { login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit: SubmitHandler<userLoginForm> = async (data) => {
     try {
-      await login(data.username, data.password);
+      // await login(data.username, data.password);
       enqueueSnackbar('Login success', {
         variant: 'success',
         action: (key) => (

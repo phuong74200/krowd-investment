@@ -5,15 +5,16 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const baseTheme = createTheme();
 
+import ThemeConfig from './shared/theme';
 import { browserRouter } from './router';
 
 function App() {
   return (
     <HelmetProvider>
-      <ThemeProvider theme={baseTheme}>
-        <CssBaseline />
+      <CssBaseline />
+      <ThemeConfig>
         <RouterProvider router={browserRouter} />
-      </ThemeProvider>
+      </ThemeConfig>
     </HelmetProvider>
   );
 }

@@ -32,7 +32,7 @@ export default function Scrollbar({
   children,
   sx,
   ...other
-}: BoxProps & Props) {
+}: Omit<BoxProps, 'ref'> & Props) {
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
@@ -48,7 +48,7 @@ export default function Scrollbar({
 
   return (
     <RootStyle>
-      <SimpleBarStyle data-cy="scroll" clickOnTrack={false} sx={sx} {...other}>
+      <SimpleBarStyle clickOnTrack={false} sx={sx} {...other}>
         {children}
       </SimpleBarStyle>
     </RootStyle>

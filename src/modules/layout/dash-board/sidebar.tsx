@@ -15,14 +15,13 @@ import {
 
 import { PATH_DASHBOARD, PATH_DOCS } from '@/routes/paths';
 import MyAvatar from '@/shared/components/my-avatar';
-import Scrollbar from '@/shared/components/Scrollbar';
+import Scrollbar from '@/shared/components/scroll-bar';
 import sidebarConfig from '@/shared/configs/sidebar-config';
 import useCollapseDrawer from '@/shared/hooks/use-collapse-drawer';
 
 import { DocIcon } from '../../../assets';
 import { MHidden } from '../../../components/@material-extend';
 import Logo from '../../../components/Logo';
-import useAuth from '../../../hooks/useAuth';
 import NavSection from '../components/nav-section';
 
 const DRAWER_WIDTH = 280;
@@ -199,7 +198,7 @@ export default function DashboardSidebar({
 
       <Box sx={{ flexGrow: 1 }} />
 
-      {!isCollapse && (
+      {/* {!isCollapse && (
         <Box sx={{ px: 2.5, pb: 3, mt: 10, width: 1 }}>
           <DocStyle>
             <DocIcon sx={{ width: 36, height: 36, mb: 2 }} />
@@ -224,7 +223,7 @@ export default function DashboardSidebar({
             </Button>
           </DocStyle>
         </Box>
-      )}
+      )} */}
     </Scrollbar>
   );
 

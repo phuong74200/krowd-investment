@@ -30,7 +30,7 @@ const MainStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function DashboardLayout(props: any) {
+export default function DashboardLayout() {
   const theme = useTheme();
   const { collapseClick } = useCollapseDrawer();
   const [open, setOpen] = useState(true);

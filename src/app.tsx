@@ -8,6 +8,8 @@ const baseTheme = createTheme();
 import ThemeConfig from './shared/theme';
 import { browserRouter } from './router';
 
+import 'simplebar-react/dist/simplebar.min.css';
+
 function App() {
   return (
     <HelmetProvider>

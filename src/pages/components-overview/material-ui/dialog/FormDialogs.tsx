@@ -3,11 +3,11 @@ import { useState } from 'react';
 import {
   Button,
   Dialog,
-  TextField,
-  DialogTitle,
-  DialogContent,
   DialogActions,
-  DialogContentText
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  TextField,
 } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
@@ -33,8 +33,8 @@ export default function FormDialogs() {
         <DialogTitle>Subscribe</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
+            To subscribe to this website, please enter your email address here.
+            We will send updates occasionally.
           </DialogContentText>
           <TextField
             autoFocus

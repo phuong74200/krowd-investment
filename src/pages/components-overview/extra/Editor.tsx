@@ -1,21 +1,28 @@
 import { useState } from 'react';
 import { EditorState } from 'react-draft-wysiwyg';
-
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  Container,
+  Stack,
+} from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Card, Container, CardHeader, CardContent, Stack } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+
+import { DraftEditor, QuillEditor } from '../../../components/editor';
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-import { QuillEditor, DraftEditor } from '../../../components/editor';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 export default function Editor() {
@@ -30,16 +37,20 @@ export default function Editor() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Editor"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Editor' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Editor' },
+            ]}
             moreLink={[
               'https://github.com/zenoamaro/react-quill',
-              'https://jpuri.github.io/react-draft-wysiwyg'
+              'https://jpuri.github.io/react-draft-wysiwyg',
             ]}
           />
         </Container>
@@ -62,14 +73,21 @@ export default function Editor() {
           <Card>
             <CardHeader title="Quill Full Editor" />
             <CardContent>
-              <QuillEditor id="full-editor" value={text2} onChange={(value) => setText2(value)} />
+              <QuillEditor
+                id="full-editor"
+                value={text2}
+                onChange={(value) => setText2(value)}
+              />
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader title="Draft Editor" />
             <CardContent>
-              <DraftEditor editorState={text3} onEditorStateChange={(value) => setText3(value)} />
+              <DraftEditor
+                editorState={text3}
+                onEditorStateChange={(value) => setText3(value)}
+              />
             </CardContent>
           </Card>
         </Stack>

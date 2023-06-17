@@ -1,5 +1,7 @@
 // routes
 // components
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+
 import { PATH_DASHBOARD } from '@/router/paths';
 import Label from '@/shared/components/label';
 import SvgIconStyle from '@/shared/components/svg-icon-style';
@@ -111,7 +113,12 @@ const sidebarConfig = [
         icon: ICONS.mail,
         info: <Label color="error">2</Label>,
       },
-      { title: 'chat', path: PATH_DASHBOARD.chat.root, icon: ICONS.chat },
+      {
+        title: 'Notification',
+        path: PATH_DASHBOARD.chat.root,
+        icon: ICONS.chat,
+        info: <Label color="error">300</Label>,
+      },
       {
         title: 'calendar',
         path: PATH_DASHBOARD.calendar,

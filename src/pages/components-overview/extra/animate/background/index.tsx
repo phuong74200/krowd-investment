@@ -1,11 +1,13 @@
 import { useState } from 'react';
 // material
-import { Grid, Card } from '@material-ui/core';
+import { Card, Grid } from '@material-ui/core';
+
+import ControlPanel from '../ControlPanel';
+
+import ContainerView from './ContainerView';
+import Toolbar from './Toolbar';
 //
 import variantTypes from './types';
-import Toolbar from './Toolbar';
-import ControlPanel from '../ControlPanel';
-import ContainerView from './ContainerView';
 
 // ----------------------------------------------------------------------
 

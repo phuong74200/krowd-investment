@@ -1,19 +1,19 @@
 import { useState } from 'react';
+import {
+  Avatar,
+  Box,
+  Button,
+  Dialog,
+  DialogTitle,
+  List,
+  ListItemAvatar,
+  ListItemButton,
+  ListItemText,
+  Typography,
+} from '@material-ui/core';
 // material
 import AddIcon from '@material-ui/icons/Add';
 import PersonIcon from '@material-ui/icons/Person';
-import {
-  Box,
-  List,
-  Avatar,
-  Button,
-  Dialog,
-  Typography,
-  DialogTitle,
-  ListItemText,
-  ListItemAvatar,
-  ListItemButton
-} from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ export default function SimpleDialog() {
                 <Avatar
                   sx={{
                     color: 'info.main',
-                    backgroundColor: 'info.lighter'
+                    backgroundColor: 'info.lighter',
                   }}
                 >
                   <PersonIcon />

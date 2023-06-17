@@ -1,7 +1,8 @@
 // material
-import FaceIcon from '@material-ui/icons/Face';
+import { Avatar, Chip, Paper, Stack } from '@material-ui/core';
 import DoneIcon from '@material-ui/icons/Done';
-import { Avatar, Chip, Stack, Paper } from '@material-ui/core';
+import FaceIcon from '@material-ui/icons/Face';
+
 //
 import { Label } from '../../Block';
 
@@ -13,7 +14,7 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { m: '8px !important' }
+  '& > *': { m: '8px !important' },
 } as const;
 
 // ----------------------------------------------------------------------
@@ -34,9 +35,18 @@ export default function ChipFilled() {
         <Paper variant="outlined" sx={style}>
           <Chip label="Basic" />
           <Chip label="Disabled" disabled />
-          <Chip avatar={<Avatar>B</Avatar>} label="Clickable" onClick={handleClick} />
           <Chip
-            avatar={<Avatar alt="Natacha" src="/static/mock-images/avatars/avatar_1.jpg" />}
+            avatar={<Avatar>B</Avatar>}
+            label="Clickable"
+            onClick={handleClick}
+          />
+          <Chip
+            avatar={
+              <Avatar
+                alt="Natacha"
+                src="/static/mock-images/avatars/avatar_1.jpg"
+              />
+            }
             label="Deletable"
             onDelete={handleDelete}
           />
@@ -69,7 +79,11 @@ export default function ChipFilled() {
             onDelete={handleDelete}
             deleteIcon={<DoneIcon />}
           />
-          <Chip label="Deletable primary" onDelete={handleDelete} color="primary" />
+          <Chip
+            label="Deletable primary"
+            onDelete={handleDelete}
+            color="primary"
+          />
         </Paper>
       </div>
 
@@ -78,7 +92,12 @@ export default function ChipFilled() {
         <Paper variant="outlined" sx={style}>
           <Chip
             label="Default deletable"
-            avatar={<Avatar alt="Natacha" src="/static/mock-images/avatars/avatar_1.jpg" />}
+            avatar={
+              <Avatar
+                alt="Natacha"
+                src="/static/mock-images/avatars/avatar_1.jpg"
+              />
+            }
             onDelete={handleDelete}
             deleteIcon={<DoneIcon />}
           />
@@ -86,14 +105,24 @@ export default function ChipFilled() {
           <Chip
             clickable
             label="Default clickable"
-            avatar={<Avatar alt="Natacha" src="/static/mock-images/avatars/avatar_1.jpg" />}
+            avatar={
+              <Avatar
+                alt="Natacha"
+                src="/static/mock-images/avatars/avatar_1.jpg"
+              />
+            }
             onDelete={handleDelete}
             deleteIcon={<DoneIcon />}
           />
 
           <Chip
             label="Primary deletable"
-            avatar={<Avatar alt="Natacha" src="/static/mock-images/avatars/avatar_1.jpg" />}
+            avatar={
+              <Avatar
+                alt="Natacha"
+                src="/static/mock-images/avatars/avatar_1.jpg"
+              />
+            }
             color="primary"
             onDelete={handleDelete}
             deleteIcon={<DoneIcon />}
@@ -102,7 +131,12 @@ export default function ChipFilled() {
           <Chip
             clickable
             label="Primary clickable"
-            avatar={<Avatar alt="Natacha" src="/static/mock-images/avatars/avatar_1.jpg" />}
+            avatar={
+              <Avatar
+                alt="Natacha"
+                src="/static/mock-images/avatars/avatar_1.jpg"
+              />
+            }
             color="primary"
             onDelete={handleDelete}
             deleteIcon={<DoneIcon />}
@@ -168,7 +202,12 @@ export default function ChipFilled() {
             onDelete={handleDelete}
             color="warning"
           />
-          <Chip icon={<FaceIcon />} label="Error deletable" onDelete={handleDelete} color="error" />
+          <Chip
+            icon={<FaceIcon />}
+            label="Error deletable"
+            onDelete={handleDelete}
+            color="error"
+          />
           <Chip
             clickable
             icon={<FaceIcon />}
@@ -182,7 +221,12 @@ export default function ChipFilled() {
       <div>
         <Label title="Size" />
         <Paper variant="outlined" sx={style}>
-          <Chip avatar={<Avatar>M</Avatar>} label="Normal" onDelete={handleDelete} color="info" />
+          <Chip
+            avatar={<Avatar>M</Avatar>}
+            label="Normal"
+            onDelete={handleDelete}
+            color="info"
+          />
           <Chip
             size="small"
             avatar={<Avatar>M</Avatar>}

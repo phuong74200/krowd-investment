@@ -1,17 +1,23 @@
 // material
+import { Container, Grid, Typography } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
-import { Grid, Container, Typography } from '@material-ui/core';
+
+import {
+  FaqsCategory,
+  FaqsForm,
+  FaqsHero,
+  FaqsList,
+} from '../components/_external-pages/faqs';
 // components
 import Page from '../components/Page';
-import { FaqsHero, FaqsCategory, FaqsList, FaqsForm } from '../components/_external-pages/faqs';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(8),
   [theme.breakpoints.up('md')]: {
-    paddingTop: theme.spacing(11)
-  }
+    paddingTop: theme.spacing(11),
+  },
 }));
 
 // ----------------------------------------------------------------------

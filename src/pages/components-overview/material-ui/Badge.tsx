@@ -1,12 +1,13 @@
 // material
-import MailIcon from '@material-ui/icons/Mail';
+import { Badge, Box, Container, Grid, Typography } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
-import { Box, Grid, Container, Typography, Badge } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+import MailIcon from '@material-ui/icons/Mail';
+
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -14,7 +15,7 @@ import { Block } from '../Block';
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 // ----------------------------------------------------------------------
@@ -27,13 +28,17 @@ export default function BadgeComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Badge"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Badge' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Badge' },
+            ]}
             moreLink="https://next.material-ui.com/components/badges"
           />
         </Container>
@@ -48,7 +53,7 @@ export default function BadgeComponent() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                '& > *': { mx: 1 }
+                '& > *': { mx: 1 },
               }}
             >
               <Badge badgeContent={4}>
@@ -82,12 +87,17 @@ export default function BadgeComponent() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                '& > *': { mx: 1 }
+                '& > *': { mx: 1 },
               }}
             >
               <Badge badgeContent={99} color="error" children={<MailIcon />} />
               <Badge badgeContent={100} color="error" children={<MailIcon />} />
-              <Badge badgeContent={1000} max={999} color="error" children={<MailIcon />} />
+              <Badge
+                badgeContent={1000}
+                max={999}
+                color="error"
+                children={<MailIcon />}
+              />
             </Block>
           </Grid>
 
@@ -98,7 +108,7 @@ export default function BadgeComponent() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                '& > *': { mx: 1 }
+                '& > *': { mx: 1 },
               }}
             >
               <Badge color="info" variant="dot">
@@ -117,7 +127,7 @@ export default function BadgeComponent() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                '& > *': { mx: 1 }
+                '& > *': { mx: 1 },
               }}
             >
               <Badge color="info" badgeContent=" ">
@@ -132,17 +142,22 @@ export default function BadgeComponent() {
                     width: 40,
                     height: 40,
                     borderRadius: '50%',
-                    bgcolor: 'warning.main'
+                    bgcolor: 'warning.main',
                   }}
                 />
               </Badge>
-              <Badge color="info" overlap="circular" badgeContent=" " variant="dot">
+              <Badge
+                color="info"
+                overlap="circular"
+                badgeContent=" "
+                variant="dot"
+              >
                 <Box
                   sx={{
                     width: 40,
                     height: 40,
                     borderRadius: '50%',
-                    bgcolor: 'warning.main'
+                    bgcolor: 'warning.main',
                   }}
                 />
               </Badge>

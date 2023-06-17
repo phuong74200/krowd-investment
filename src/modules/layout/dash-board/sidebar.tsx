@@ -3,7 +3,6 @@ import { Link as RouterLink, useLocation } from 'react-router-dom';
 import {
   alpha,
   Box,
-  Button,
   CardActionArea,
   Drawer,
   Link,
@@ -13,13 +12,12 @@ import {
   Typography,
 } from '@mui/material';
 
-import { PATH_DASHBOARD, PATH_DOCS } from '@/routes/paths';
+import { PATH_DASHBOARD } from '@/routes/paths';
 import MyAvatar from '@/shared/components/my-avatar';
 import Scrollbar from '@/shared/components/scroll-bar';
 import sidebarConfig from '@/shared/configs/sidebar-config';
 import useCollapseDrawer from '@/shared/hooks/use-collapse-drawer';
 
-import { DocIcon } from '../../../assets';
 import { MHidden } from '../../../components/@material-extend';
 import Logo from '../../../components/Logo';
 import NavSection from '../components/nav-section';
@@ -43,17 +41,6 @@ const AccountStyle = styled('div')(({ theme }) => ({
   borderRadius: theme.shape.borderRadiusSm,
   backgroundColor: theme.palette.grey[500_12],
 }));
-
-const DocStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(2.5),
-  borderRadius: theme.shape.borderRadiusMd,
-  backgroundColor:
-    theme.palette.mode === 'light'
-      ? alpha(theme.palette.primary.main, 0.08)
-      : theme.palette.primary.lighter,
-}));
-
-// ----------------------------------------------------------------------
 
 type IconCollapseProps = {
   onToggleCollapse: VoidFunction;

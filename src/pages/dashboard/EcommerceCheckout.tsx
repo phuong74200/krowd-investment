@@ -1,28 +1,37 @@
-import { Icon } from '@iconify/react';
 import { useEffect } from 'react';
 import checkmarkFill from '@iconify/icons-eva/checkmark-fill';
+import { Icon } from '@iconify/react';
 // material
-import { Box, Grid, Step, Stepper, Container, StepLabel, StepConnector } from '@material-ui/core';
+import {
+  Box,
+  Container,
+  Grid,
+  Step,
+  StepConnector,
+  StepLabel,
+  Stepper,
+} from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
-// redux
-import { useDispatch, useSelector } from '../../redux/store';
-import { getCart, createBilling } from '../../redux/slices/product';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
+
+// @types
+import { ProductState } from '../../@types/products';
+import {
+  CheckoutBillingAddress,
+  CheckoutCart,
+  CheckoutOrderComplete,
+  CheckoutPayment,
+} from '../../components/_dashboard/e-commerce/checkout';
+import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
+// components
+import Page from '../../components/Page';
 // hooks
 import useIsMountedRef from '../../hooks/useIsMountedRef';
 import useSettings from '../../hooks/useSettings';
-// @types
-import { ProductState } from '../../@types/products';
-// components
-import Page from '../../components/Page';
-import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-import {
-  CheckoutCart,
-  CheckoutPayment,
-  CheckoutOrderComplete,
-  CheckoutBillingAddress
-} from '../../components/_dashboard/e-commerce/checkout';
+import { createBilling, getCart } from '../../redux/slices/product';
+// redux
+import { useDispatch, useSelector } from '../../redux/store';
+// routes
+import { PATH_DASHBOARD } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 
@@ -32,21 +41,27 @@ const QontoConnector = withStyles((theme) => ({
   alternativeLabel: {
     top: 10,
     left: 'calc(-50% + 20px)',
-    right: 'calc(50% + 20px)'
+    right: 'calc(50% + 20px)',
   },
   active: {
-    '& $line': { borderColor: theme.palette.primary.main }
+    '& $line': { borderColor: theme.palette.primary.main },
   },
   completed: {
-    '& $line': { borderColor: theme.palette.primary.main }
+    '& $line': { borderColor: theme.palette.primary.main },
   },
   line: {
     borderTopWidth: 2,
-    borderColor: theme.palette.divider
-  }
+    borderColor: theme.palette.divider,
+  },
 }))(StepConnector);
 
-function QontoStepIcon({ active, completed }: { active: boolean; completed: boolean }) {
+function QontoStepIcon({
+  active,
+  completed,
+}: {
+  active: boolean;
+  completed: boolean;
+}) {
   return (
     <Box
       sx={{
@@ -57,7 +72,7 @@ function QontoStepIcon({ active, completed }: { active: boolean; completed: bool
         alignItems: 'center',
         justifyContent: 'center',
         color: active ? 'primary.main' : 'divider',
-        bgcolor: 'background.default'
+        bgcolor: 'background.default',
       }}
     >
       {completed ? (
@@ -72,7 +87,7 @@ function QontoStepIcon({ active, completed }: { active: boolean; completed: bool
             width: 8,
             height: 8,
             borderRadius: '50%',
-            backgroundColor: 'currentColor'
+            backgroundColor: 'currentColor',
           }}
         />
       )}
@@ -84,7 +99,9 @@ export default function EcommerceCheckout() {
   const { themeStretch } = useSettings();
   const dispatch = useDispatch();
   const isMountedRef = useIsMountedRef();
-  const { checkout } = useSelector((state: { product: ProductState }) => state.product);
+  const { checkout } = useSelector(
+    (state: { product: ProductState }) => state.product
+  );
   const { cart, billing, activeStep } = checkout;
   const isComplete = activeStep === STEPS.length;
 
@@ -109,15 +126,19 @@ export default function EcommerceCheckout() {
             { name: 'Dashboard', href: PATH_DASHBOARD.root },
             {
               name: 'E-Commerce',
-              href: PATH_DASHBOARD.eCommerce.root
+              href: PATH_DASHBOARD.eCommerce.root,
             },
-            { name: 'Checkout' }
+            { name: 'Checkout' },
           ]}
         />
 
         <Grid container justifyContent={isComplete ? 'center' : 'flex-start'}>
           <Grid item xs={12} md={8} sx={{ mb: 5 }}>
-            <Stepper alternativeLabel activeStep={activeStep} connector={<QontoConnector />}>
+            <Stepper
+              alternativeLabel
+              activeStep={activeStep}
+              connector={<QontoConnector />}
+            >
               {STEPS.map((label) => (
                 <Step key={label}>
                   <StepLabel
@@ -125,8 +146,8 @@ export default function EcommerceCheckout() {
                     sx={{
                       '& .MuiStepLabel-label': {
                         typography: 'subtitle2',
-                        color: 'text.disabled'
-                      }
+                        color: 'text.disabled',
+                      },
                     }}
                   >
                     {label}

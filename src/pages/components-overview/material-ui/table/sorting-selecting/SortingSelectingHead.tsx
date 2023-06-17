@@ -1,5 +1,12 @@
+import {
+  Box,
+  Checkbox,
+  TableCell,
+  TableHead,
+  TableRow,
+  TableSortLabel,
+} from '@material-ui/core';
 import { visuallyHidden } from '@material-ui/utils';
-import { Box, Checkbox, TableRow, TableCell, TableHead, TableSortLabel } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
@@ -25,7 +32,7 @@ export default function SortingSelectingHead({
   headLabel,
   numSelected,
   onRequestSort,
-  onSelectAllClick
+  onSelectAllClick,
 }: SortingSelectingHeadProps) {
   return (
     <TableHead>
@@ -38,7 +45,7 @@ export default function SortingSelectingHead({
               onSelectAllClick(event.target.checked)
             }
             inputProps={{
-              'aria-label': 'select all desserts'
+              'aria-label': 'select all desserts',
             }}
           />
         </TableCell>

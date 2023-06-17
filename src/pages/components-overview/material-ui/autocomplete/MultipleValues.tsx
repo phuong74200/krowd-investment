@@ -1,4 +1,4 @@
-import { TextField, Autocomplete } from '@material-ui/core';
+import { Autocomplete, TextField } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
@@ -19,7 +19,11 @@ export default function MultipleValues({ options }: MultipleValuesProps) {
       defaultValue={[options[13]]}
       filterSelectedOptions
       renderInput={(params) => (
-        <TextField {...params} label="filterSelectedOptions" placeholder="Favorites" />
+        <TextField
+          {...params}
+          label="filterSelectedOptions"
+          placeholder="Favorites"
+        />
       )}
     />
   );

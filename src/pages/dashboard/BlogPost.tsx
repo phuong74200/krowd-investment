@@ -1,34 +1,48 @@
 import { useEffect } from 'react';
-import { sentenceCase } from 'change-case';
 import { useParams } from 'react-router-dom';
 // material
-import { Box, Card, Divider, Skeleton, Container, Typography, Pagination } from '@material-ui/core';
-// redux
-import { useDispatch, useSelector } from '../../redux/store';
-import { getPost, getRecentPosts } from '../../redux/slices/blog';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
-// hooks
-import useSettings from '../../hooks/useSettings';
+import {
+  Box,
+  Card,
+  Container,
+  Divider,
+  Pagination,
+  Skeleton,
+  Typography,
+} from '@material-ui/core';
+import { sentenceCase } from 'change-case';
+
 // @types
 import { BlogState } from '../../@types/blog';
+import {
+  BlogPostCommentForm,
+  BlogPostCommentList,
+  BlogPostHero,
+  BlogPostRecent,
+  BlogPostTags,
+} from '../../components/_dashboard/blog';
+import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
+import Markdown from '../../components/Markdown';
 // components
 import Page from '../../components/Page';
-import Markdown from '../../components/Markdown';
-import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-import {
-  BlogPostHero,
-  BlogPostTags,
-  BlogPostRecent,
-  BlogPostCommentList,
-  BlogPostCommentForm
-} from '../../components/_dashboard/blog';
+// hooks
+import useSettings from '../../hooks/useSettings';
+import { getPost, getRecentPosts } from '../../redux/slices/blog';
+// redux
+import { useDispatch, useSelector } from '../../redux/store';
+// routes
+import { PATH_DASHBOARD } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 
 const SkeletonLoad = (
   <>
-    <Skeleton width="100%" height={560} variant="rectangular" sx={{ borderRadius: 2 }} />
+    <Skeleton
+      width="100%"
+      height={560}
+      variant="rectangular"
+      sx={{ borderRadius: 2 }}
+    />
     <Box sx={{ mt: 3, display: 'flex', alignItems: 'center' }}>
       <Skeleton variant="circular" width={64} height={64} />
       <Box sx={{ flexGrow: 1, ml: 2 }}>
@@ -44,7 +58,9 @@ export default function BlogPost() {
   const { themeStretch } = useSettings();
   const dispatch = useDispatch();
   const { title } = useParams();
-  const { post, error, recentPosts } = useSelector((state: { blog: BlogState }) => state.blog);
+  const { post, error, recentPosts } = useSelector(
+    (state: { blog: BlogState }) => state.blog
+  );
 
   useEffect(() => {
     dispatch(getPost(title));
@@ -59,7 +75,7 @@ export default function BlogPost() {
           links={[
             { name: 'Dashboard', href: PATH_DASHBOARD.root },
             { name: 'Blog', href: PATH_DASHBOARD.blog.root },
-            { name: sentenceCase(title) }
+            { name: sentenceCase(title) },
           ]}
         />
 
@@ -89,7 +105,14 @@ export default function BlogPost() {
 
               <BlogPostCommentList post={post} />
 
-              <Box sx={{ mb: 5, mt: 3, display: 'flex', justifyContent: 'flex-end' }}>
+              <Box
+                sx={{
+                  mb: 5,
+                  mt: 3,
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                }}
+              >
                 <Pagination count={8} color="primary" />
               </Box>
 

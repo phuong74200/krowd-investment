@@ -1,7 +1,8 @@
-import { Icon } from '@iconify/react';
 import refreshFill from '@iconify/icons-eva/refresh-fill';
+import { Icon } from '@iconify/react';
 // material
-import { Box, Paper, FormControlLabel, Switch } from '@material-ui/core';
+import { Box, FormControlLabel, Paper, Switch } from '@material-ui/core';
+
 // components
 import { MIconButton } from '../../../../../components/@material-extend';
 
@@ -28,7 +29,7 @@ export default function Toolbar({
       sx={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
       }}
       {...other}
     >

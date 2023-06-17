@@ -1,8 +1,9 @@
 // material
 import { Box, Paper, Typography } from '@material-ui/core';
+
+import { MotionInView } from '../../../../../components/animate';
 // components
 import Scrollbar from '../../../../../components/Scrollbar';
-import { MotionInView } from '../../../../../components/animate';
 //
 import getVariant from '../getVariant';
 
@@ -12,13 +13,16 @@ type ContainerViewProps = {
   selectVariant: string;
 };
 
-export default function ContainerView({ selectVariant, ...other }: ContainerViewProps) {
+export default function ContainerView({
+  selectVariant,
+  ...other
+}: ContainerViewProps) {
   return (
     <Paper
       sx={{
         height: 480,
         overflow: 'hidden',
-        bgcolor: 'background.neutral'
+        bgcolor: 'background.neutral',
       }}
       {...other}
     >
@@ -36,7 +40,7 @@ export default function ContainerView({ selectVariant, ...other }: ContainerView
                 alignItems: 'center',
                 justifyContent: 'center',
                 bgcolor: 'background.paper',
-                boxShadow: (theme) => theme.customShadows.z8
+                boxShadow: (theme) => theme.customShadows.z8,
               }}
             >
               <Typography variant="body2">Item {index + 1}</Typography>

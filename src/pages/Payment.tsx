@@ -1,27 +1,35 @@
-import * as Yup from 'yup';
-import { useSnackbar } from 'notistack5';
-import { useFormik, Form, FormikProvider } from 'formik';
+import {
+  Box,
+  Card,
+  Container,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from '@material-ui/core';
 // material
-import { useTheme, styled } from '@material-ui/core/styles';
-import { Box, Card, Grid, Container, Typography, useMediaQuery } from '@material-ui/core';
+import { styled, useTheme } from '@material-ui/core/styles';
+import { Form, FormikProvider, useFormik } from 'formik';
+import { useSnackbar } from 'notistack5';
+import * as Yup from 'yup';
+
 // @types
 import { InitialValues } from '../@types/payment';
-// utils
-import fakeRequest from '../utils/fakeRequest';
+import {
+  PaymentBillingAddress,
+  PaymentMethods,
+  PaymentSummary,
+} from '../components/_external-pages/payment';
 // components
 import Page from '../components/Page';
-import {
-  PaymentSummary,
-  PaymentMethods,
-  PaymentBillingAddress
-} from '../components/_external-pages/payment';
+// utils
+import fakeRequest from '../utils/fakeRequest';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   minHeight: '100%',
   paddingTop: theme.spacing(15),
-  paddingBottom: theme.spacing(10)
+  paddingBottom: theme.spacing(10),
 }));
 
 // ----------------------------------------------------------------------
@@ -34,8 +42,10 @@ export default function Payment() {
   const PaymentSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     phone: Yup.string().required('Phone is required'),
-    email: Yup.string().email('Email must be a valid email address').required('Email is required'),
-    address: Yup.string().required('Address is required')
+    email: Yup.string()
+      .email('Email must be a valid email address')
+      .required('Email is required'),
+    address: Yup.string().required('Address is required'),
   });
 
   const formik = useFormik<InitialValues>({
@@ -51,7 +61,7 @@ export default function Payment() {
       newCardName: '',
       newCardNumber: '',
       newCardExpired: '',
-      newCardCvv: ''
+      newCardCvv: '',
     },
     validationSchema: PaymentSchema,
     onSubmit: async (values, { resetForm }) => {
@@ -60,7 +70,7 @@ export default function Payment() {
         phone: values.phone,
         email: values.email,
         address: values.address,
-        subscription: 'premium'
+        subscription: 'premium',
       };
       await fakeRequest(500);
       if (values.method === 'paypal') {
@@ -68,7 +78,7 @@ export default function Payment() {
           JSON.stringify(
             {
               ...submitData,
-              method: values.method
+              method: values.method,
             },
             null,
             2
@@ -80,7 +90,7 @@ export default function Payment() {
             {
               ...submitData,
               method: values.method,
-              card: values.card
+              card: values.card,
             },
             null,
             2
@@ -96,7 +106,7 @@ export default function Payment() {
               newCardName: values.newCardName,
               newCardNumber: values.newCardNumber,
               newCardExpired: values.newCardExpired,
-              newCardCvv: values.newCardCvv
+              newCardCvv: values.newCardCvv,
             },
             null,
             2
@@ -105,7 +115,7 @@ export default function Payment() {
       }
       resetForm();
       enqueueSnackbar('Payment success', { variant: 'success' });
-    }
+    },
   });
 
   return (

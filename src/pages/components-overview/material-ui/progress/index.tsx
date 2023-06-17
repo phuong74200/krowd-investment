@@ -1,23 +1,25 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Box, Container, Stack } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Container, Stack } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../../routes/paths';
+
+import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../../components/Page';
-import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
-//
-import ProgressLinear from './ProgressLinear';
-import ProgressCircular from './ProgressCircular';
+// routes
+import { PATH_PAGE } from '../../../../routes/paths';
 //
 import { Block } from '../../Block';
+
+import ProgressCircular from './ProgressCircular';
+//
+import ProgressLinear from './ProgressLinear';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 // ----------------------------------------------------------------------
@@ -74,13 +76,17 @@ export default function ProgressComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Progress"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Progress' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Progress' },
+            ]}
             moreLink="https://next.material-ui.com/components/progress"
           />
         </Container>

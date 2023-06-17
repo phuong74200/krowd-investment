@@ -1,17 +1,22 @@
 // material
+import { Container, Grid } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
-import { Grid, Container } from '@material-ui/core';
+
+import {
+  ContactForm,
+  ContactHero,
+  ContactMap,
+} from '../components/_external-pages/contact';
 // components
 import Page from '../components/Page';
-import { ContactHero, ContactForm, ContactMap } from '../components/_external-pages/contact';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(8),
   [theme.breakpoints.up('md')]: {
-    paddingTop: theme.spacing(11)
-  }
+    paddingTop: theme.spacing(11),
+  },
 }));
 
 // ----------------------------------------------------------------------

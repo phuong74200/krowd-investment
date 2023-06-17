@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
 // material
 import { Box, Paper } from '@material-ui/core';
+import { motion } from 'framer-motion';
+
 // components
 import { MotionContainer } from '../../../../../components/animate';
 //
@@ -15,7 +16,7 @@ const IMG = [
   '/static/mock-images/feeds/feed_3.jpg',
   '/static/mock-images/feeds/feed_4.jpg',
   '/static/mock-images/feeds/feed_5.jpg',
-  '/static/mock-images/feeds/feed_8.jpg'
+  '/static/mock-images/feeds/feed_8.jpg',
 ];
 
 type ContainerViewProps = {
@@ -41,7 +42,7 @@ export default function ContainerView({
         overflow: 'hidden',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: 'background.neutral'
+        bgcolor: 'background.neutral',
       }}
       {...other}
     >
@@ -72,7 +73,7 @@ export default function ContainerView({
                 borderRadius: 1,
                 objectFit: 'cover',
                 height: isMulti ? 72 : 320,
-                boxShadow: (theme) => theme.customShadows.z8
+                boxShadow: (theme) => theme.customShadows.z8,
               }}
             />
           ))}

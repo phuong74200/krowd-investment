@@ -1,23 +1,24 @@
 // material
-import { Grid, Container, Typography } from '@material-ui/core';
-// hooks
-import useSettings from '../../hooks/useSettings';
-// components
-import Page from '../../components/Page';
+import { Container, Grid, Typography } from '@material-ui/core';
+
 import {
-  AnalyticsTasks,
-  AnalyticsNewUsers,
   AnalyticsBugReports,
+  AnalyticsConversionRates,
+  AnalyticsCurrentSubject,
+  AnalyticsCurrentVisits,
   AnalyticsItemOrders,
   AnalyticsNewsUpdate,
-  AnalyticsWeeklySales,
+  AnalyticsNewUsers,
   AnalyticsOrderTimeline,
-  AnalyticsCurrentVisits,
-  AnalyticsWebsiteVisits,
+  AnalyticsTasks,
   AnalyticsTrafficBySite,
-  AnalyticsCurrentSubject,
-  AnalyticsConversionRates
+  AnalyticsWebsiteVisits,
+  AnalyticsWeeklySales,
 } from '../../components/_dashboard/general-analytics';
+// components
+import Page from '../../components/Page';
+// hooks
+import useSettings from '../../hooks/useSettings';
 
 // ----------------------------------------------------------------------
 

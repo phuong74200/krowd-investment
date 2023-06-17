@@ -1,19 +1,20 @@
 import { useState } from 'react';
+import {
+  FilledInput,
+  FormControl,
+  FormHelperText,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  MenuItem,
+  Stack,
+  TextField,
+} from '@material-ui/core';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 // material
 import Visibility from '@material-ui/icons/Visibility';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import {
-  Stack,
-  MenuItem,
-  TextField,
-  IconButton,
-  InputLabel,
-  FormControl,
-  FilledInput,
-  FormHelperText,
-  InputAdornment
-} from '@material-ui/core';
+
 //
 import { Block } from '../../Block';
 
@@ -23,11 +24,11 @@ const CURRENCIES = [
   { value: 'USD', label: '$' },
   { value: 'EUR', label: '€' },
   { value: 'BTC', label: '฿' },
-  { value: 'JPY', label: '¥' }
+  { value: 'JPY', label: '¥' },
 ];
 
 const style = {
-  '& > *': { my: '8px !important' }
+  '& > *': { my: '8px !important' },
 };
 
 // ----------------------------------------------------------------------
@@ -46,22 +47,25 @@ export default function Filled() {
     password: '',
     weight: '',
     weightRange: '',
-    showPassword: false
+    showPassword: false,
   });
 
   const handleChangeCurrency = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCurrency(event.target.value);
   };
 
-  const handleChange = (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
+  const handleChange =
+    (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValues({ ...values, [prop]: event.target.value });
+    };
 
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
   };
 
-  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
     event.preventDefault();
   };
 
@@ -103,7 +107,7 @@ export default function Filled() {
                 <InputAdornment position="start">
                   <AccountCircle />
                 </InputAdornment>
-              )
+              ),
             }}
           />
           <TextField
@@ -117,14 +121,16 @@ export default function Filled() {
                 <InputAdornment position="start">
                   <AccountCircle />
                 </InputAdornment>
-              )
+              ),
             }}
           />
           <TextField
             fullWidth
             label="With normal TextField"
             InputProps={{
-              startAdornment: <InputAdornment position="start">Kg</InputAdornment>
+              startAdornment: (
+                <InputAdornment position="start">Kg</InputAdornment>
+              ),
             }}
             variant="filled"
           />
@@ -136,13 +142,17 @@ export default function Filled() {
               endAdornment={<InputAdornment position="end">Kg</InputAdornment>}
               aria-describedby="filled-weight-helper-text"
               inputProps={{
-                'aria-label': 'weight'
+                'aria-label': 'weight',
               }}
             />
-            <FormHelperText id="filled-weight-helper-text">Weight</FormHelperText>
+            <FormHelperText id="filled-weight-helper-text">
+              Weight
+            </FormHelperText>
           </FormControl>
           <FormControl variant="filled" fullWidth>
-            <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
+            <InputLabel htmlFor="filled-adornment-password">
+              Password
+            </InputLabel>
             <FilledInput
               type={values.showPassword ? 'text' : 'password'}
               value={values.password}
@@ -207,8 +217,19 @@ export default function Filled() {
         </Block>
 
         <Block title="Size" sx={style}>
-          <TextField fullWidth label="Size" size="small" variant="filled" defaultValue="Small" />
-          <TextField fullWidth label="Size" variant="filled" defaultValue="Normal" />
+          <TextField
+            fullWidth
+            label="Size"
+            size="small"
+            variant="filled"
+            defaultValue="Small"
+          />
+          <TextField
+            fullWidth
+            label="Size"
+            variant="filled"
+            defaultValue="Normal"
+          />
         </Block>
 
         <Block title="Select" sx={style}>

@@ -1,24 +1,25 @@
 // material
-import AddIcon from '@material-ui/icons/Add';
-import DeleteIcon from '@material-ui/icons/Delete';
-import { styled } from '@material-ui/core/styles';
 import {
   Box,
-  Fab,
-  Zoom,
-  Grid,
-  Fade,
   Button,
-  Tooltip,
   Container,
-  IconButton
+  Fab,
+  Fade,
+  Grid,
+  IconButton,
+  Tooltip,
+  Zoom,
 } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+import { styled } from '@material-ui/core/styles';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+import { MFab, MIconButton } from '../../../components/@material-extend';
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-import { MFab, MIconButton } from '../../../components/@material-extend';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -32,7 +33,7 @@ Nullam eget est sed sem iaculis gravida eget vitae justo.
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 const style = {
@@ -40,7 +41,7 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { m: '8px !important' }
+  '& > *': { m: '8px !important' },
 } as const;
 // ----------------------------------------------------------------------
 
@@ -52,13 +53,17 @@ export default function TooltipsComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Tooltip"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Tooltip' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Tooltip' },
+            ]}
             moreLink="https://next.material-ui.com/components/tooltips"
           />
         </Container>
@@ -125,7 +130,11 @@ export default function TooltipsComponent() {
               <Tooltip title="Add">
                 <Button color="inherit">Grow</Button>
               </Tooltip>
-              <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title="Add">
+              <Tooltip
+                TransitionComponent={Fade}
+                TransitionProps={{ timeout: 600 }}
+                title="Add"
+              >
                 <Button color="inherit">Fade</Button>
               </Tooltip>
               <Tooltip TransitionComponent={Zoom} title="Add">
@@ -164,7 +173,13 @@ export default function TooltipsComponent() {
                       <Button color="inherit">left-end</Button>
                     </Tooltip>
                   </Grid>
-                  <Grid item container xs={6} alignItems="flex-end" direction="column">
+                  <Grid
+                    item
+                    container
+                    xs={6}
+                    alignItems="flex-end"
+                    direction="column"
+                  >
                     <Grid item>
                       <Tooltip title="Add" placement="right-start">
                         <Button color="inherit">right-start</Button>

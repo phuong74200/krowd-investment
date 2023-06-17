@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { Box, Button, Container, Typography } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Button, Container, Typography } from '@material-ui/core';
+
+//
+import { SentIcon } from '../../assets';
+import { ResetPasswordForm } from '../../components/authentication/reset-password';
+// components
+import Page from '../../components/Page';
 // layouts
 import LogoOnlyLayout from '../../layouts/LogoOnlyLayout';
 // routes
 import { PATH_AUTH } from '../../routes/paths';
-// components
-import Page from '../../components/Page';
-import { ResetPasswordForm } from '../../components/authentication/reset-password';
-//
-import { SentIcon } from '../../assets';
 
 // ----------------------------------------------------------------------
 
@@ -20,7 +21,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
   minHeight: '100%',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: theme.spacing(12, 0)
+  padding: theme.spacing(12, 0),
 }));
 
 // ----------------------------------------------------------------------
@@ -41,8 +42,8 @@ export default function ResetPassword() {
                 Forgot your password?
               </Typography>
               <Typography sx={{ color: 'text.secondary', mb: 5 }}>
-                Please enter the email address associated with your account and We will email you a
-                link to reset your password.
+                Please enter the email address associated with your account and
+                We will email you a link to reset your password.
               </Typography>
 
               <ResetPasswordForm

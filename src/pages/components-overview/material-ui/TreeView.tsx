@@ -1,18 +1,19 @@
-import { useSpring, animated } from 'react-spring';
-// material
-import { TreeView, TreeItem } from '@material-ui/lab';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import { withStyles, createStyles } from '@material-ui/styles';
-import { Theme, alpha, styled } from '@material-ui/core/styles';
-import { Box, Stack, Collapse, Container } from '@material-ui/core';
+import { animated, useSpring } from 'react-spring';
+import { Box, Collapse, Container, Stack } from '@material-ui/core';
+import { alpha, styled, Theme } from '@material-ui/core/styles';
 import { TransitionProps } from '@material-ui/core/transitions';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// material
+import { TreeItem, TreeView } from '@material-ui/lab';
 import { TreeItemProps } from '@material-ui/lab/TreeItem';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+import { createStyles, withStyles } from '@material-ui/styles';
+
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -20,13 +21,13 @@ import { Block } from '../Block';
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 const TreeViewStyle = styled(TreeView)({
   height: 240,
   flexGrow: 1,
-  maxWidth: 400
+  maxWidth: 400,
 });
 
 // ----------------------------------------------------------------------
@@ -35,12 +36,12 @@ function TransitionComponent(props: TransitionProps) {
   const style = useSpring({
     from: {
       opacity: 0,
-      transform: 'translate3d(20px,0,0)'
+      transform: 'translate3d(20px,0,0)',
     },
     to: {
       opacity: props.in ? 1 : 0,
-      transform: `translate3d(${props.in ? 0 : 20}px,0,0)`
-    }
+      transform: `translate3d(${props.in ? 0 : 20}px,0,0)`,
+    },
   });
   return (
     <animated.div style={style}>
@@ -53,16 +54,18 @@ const StyledTreeItem = withStyles((theme: Theme) =>
   createStyles({
     iconContainer: {
       '& .close': {
-        opacity: 0.3
-      }
+        opacity: 0.3,
+      },
     },
     group: {
       marginLeft: 15,
       paddingLeft: 18,
-      borderLeft: `1px dashed ${alpha(theme.palette.text.primary, 0.4)}`
-    }
+      borderLeft: `1px dashed ${alpha(theme.palette.text.primary, 0.4)}`,
+    },
   })
-)((props: TreeItemProps) => <TreeItem {...props} TransitionComponent={TransitionComponent} />);
+)((props: TreeItemProps) => (
+  <TreeItem {...props} TransitionComponent={TransitionComponent} />
+));
 
 export default function TreesViewComponent() {
   return (
@@ -72,13 +75,17 @@ export default function TreesViewComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Tree View"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Tree View' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Tree View' },
+            ]}
             moreLink="https://next.material-ui.com/components/tree-view"
           />
         </Container>

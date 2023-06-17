@@ -1,19 +1,20 @@
 import { useState } from 'react';
+import {
+  FormControl,
+  FormHelperText,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  MenuItem,
+  OutlinedInput,
+  Stack,
+  TextField,
+} from '@material-ui/core';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 // material
 import Visibility from '@material-ui/icons/Visibility';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import {
-  Stack,
-  MenuItem,
-  TextField,
-  InputLabel,
-  IconButton,
-  FormControl,
-  OutlinedInput,
-  InputAdornment,
-  FormHelperText
-} from '@material-ui/core';
+
 //
 import { Block } from '../../Block';
 
@@ -23,11 +24,11 @@ const CURRENCIES = [
   { value: 'USD', label: '$' },
   { value: 'EUR', label: '€' },
   { value: 'BTC', label: '฿' },
-  { value: 'JPY', label: '¥' }
+  { value: 'JPY', label: '¥' },
 ];
 
 const style = {
-  '& > *': { my: '8px !important' }
+  '& > *': { my: '8px !important' },
 };
 
 // ----------------------------------------------------------------------
@@ -47,22 +48,25 @@ export default function Outlined() {
     password: '',
     weight: '',
     weightRange: '',
-    showPassword: false
+    showPassword: false,
   });
 
   const handleChangeCurrency = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCurrency(event.target.value);
   };
 
-  const handleChange = (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
+  const handleChange =
+    (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValues({ ...values, [prop]: event.target.value });
+    };
 
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
   };
 
-  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
     event.preventDefault();
   };
 
@@ -71,9 +75,24 @@ export default function Outlined() {
       <Stack spacing={3} sx={{ width: 1 }}>
         <Block title="General" sx={style}>
           <TextField fullWidth label="Inactive" />
-          <TextField required fullWidth label="Activated" defaultValue="Hello Minimal" />
-          <TextField fullWidth type="password" label="Password" autoComplete="current-password" />
-          <TextField disabled fullWidth label="Disabled" defaultValue="Hello Minimal" />
+          <TextField
+            required
+            fullWidth
+            label="Activated"
+            defaultValue="Hello Minimal"
+          />
+          <TextField
+            fullWidth
+            type="password"
+            label="Password"
+            autoComplete="current-password"
+          />
+          <TextField
+            disabled
+            fullWidth
+            label="Disabled"
+            defaultValue="Hello Minimal"
+          />
         </Block>
 
         <Block title="With Icon & Adornments" sx={style}>
@@ -85,7 +104,7 @@ export default function Outlined() {
                 <InputAdornment position="start">
                   <AccountCircle />
                 </InputAdornment>
-              )
+              ),
             }}
           />
           <TextField
@@ -98,14 +117,16 @@ export default function Outlined() {
                 <InputAdornment position="start">
                   <AccountCircle />
                 </InputAdornment>
-              )
+              ),
             }}
           />
           <TextField
             fullWidth
             label="With normal TextField"
             InputProps={{
-              startAdornment: <InputAdornment position="start">Kg</InputAdornment>
+              startAdornment: (
+                <InputAdornment position="start">Kg</InputAdornment>
+              ),
             }}
           />
           <FormControl fullWidth>
@@ -116,13 +137,17 @@ export default function Outlined() {
               endAdornment={<InputAdornment position="end">Kg</InputAdornment>}
               aria-describedby="outlined-weight-helper-text"
               inputProps={{
-                'aria-label': 'weight'
+                'aria-label': 'weight',
               }}
             />
-            <FormHelperText id="outlined-weight-helper-text">Weight</FormHelperText>
+            <FormHelperText id="outlined-weight-helper-text">
+              Weight
+            </FormHelperText>
           </FormControl>
           <FormControl fullWidth>
-            <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+            <InputLabel htmlFor="outlined-adornment-password">
+              Password
+            </InputLabel>
             <OutlinedInput
               type={values.showPassword ? 'text' : 'password'}
               value={values.password}
@@ -166,7 +191,12 @@ export default function Outlined() {
 
       <Stack spacing={3} sx={{ width: 1 }}>
         <Block title="Type" sx={style}>
-          <TextField fullWidth type="password" label="Password" autoComplete="current-password" />
+          <TextField
+            fullWidth
+            type="password"
+            label="Password"
+            autoComplete="current-password"
+          />
           <TextField
             fullWidth
             type="number"
@@ -216,9 +246,26 @@ export default function Outlined() {
         </Block>
 
         <Block title="Multiline" sx={style}>
-          <TextField fullWidth label="Multiline" multiline maxRows={4} value="Controlled" />
-          <TextField fullWidth multiline placeholder="Placeholder" label="Multiline Placeholder" />
-          <TextField rows={4} fullWidth multiline label="Multiline" defaultValue="Default Value" />
+          <TextField
+            fullWidth
+            label="Multiline"
+            multiline
+            maxRows={4}
+            value="Controlled"
+          />
+          <TextField
+            fullWidth
+            multiline
+            placeholder="Placeholder"
+            label="Multiline Placeholder"
+          />
+          <TextField
+            rows={4}
+            fullWidth
+            multiline
+            label="Multiline"
+            defaultValue="Default Value"
+          />
         </Block>
       </Stack>
     </Stack>

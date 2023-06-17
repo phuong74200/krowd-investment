@@ -1,11 +1,19 @@
 // material
+import {
+  Box,
+  Container,
+  Grid,
+  Stack,
+  Switch,
+  Typography,
+} from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
-import { Box, Grid, Switch, Container, Typography, Stack } from '@material-ui/core';
+
+//
+import { PlanFreeIcon, PlanPremiumIcon, PlanStarterIcon } from '../assets';
+import { PricingPlanCard } from '../components/_external-pages/pricing';
 // components
 import Page from '../components/Page';
-import { PricingPlanCard } from '../components/_external-pages/pricing';
-//
-import { PlanFreeIcon, PlanStarterIcon, PlanPremiumIcon } from '../assets';
 
 // ----------------------------------------------------------------------
 
@@ -20,9 +28,9 @@ const PLANS = [
       { text: '3 boards', isAvailable: true },
       { text: 'Up to 5 team members', isAvailable: false },
       { text: 'Advanced security', isAvailable: false },
-      { text: 'Permissions & workflows', isAvailable: false }
+      { text: 'Permissions & workflows', isAvailable: false },
     ],
-    labelAction: 'current plan'
+    labelAction: 'current plan',
   },
   {
     subscription: 'starter',
@@ -34,9 +42,9 @@ const PLANS = [
       { text: '3 boards', isAvailable: true },
       { text: 'Up to 5 team members', isAvailable: true },
       { text: 'Advanced security', isAvailable: false },
-      { text: 'Permissions & workflows', isAvailable: false }
+      { text: 'Permissions & workflows', isAvailable: false },
     ],
-    labelAction: 'choose starter'
+    labelAction: 'choose starter',
   },
   {
     subscription: 'premium',
@@ -48,16 +56,16 @@ const PLANS = [
       { text: '3 boards', isAvailable: true },
       { text: 'Up to 5 team members', isAvailable: true },
       { text: 'Advanced security', isAvailable: true },
-      { text: 'Permissions & workflows', isAvailable: true }
+      { text: 'Permissions & workflows', isAvailable: true },
     ],
-    labelAction: 'choose premium'
-  }
+    labelAction: 'choose premium',
+  },
 ];
 
 const RootStyle = styled(Page)(({ theme }) => ({
   minHeight: '100%',
   paddingTop: theme.spacing(15),
-  paddingBottom: theme.spacing(10)
+  paddingBottom: theme.spacing(10),
 }));
 
 // ----------------------------------------------------------------------

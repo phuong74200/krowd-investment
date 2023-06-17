@@ -1,11 +1,12 @@
 import { Link as RouterLink } from 'react-router-dom';
+import { Button, Container, Typography } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Button, Typography, Container } from '@material-ui/core';
-// components
-import Page from '../components/Page';
+
 //
 import { MaintenanceIllustration } from '../assets';
+// components
+import Page from '../components/Page';
 
 // ----------------------------------------------------------------------
 
@@ -14,7 +15,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   paddingTop: theme.spacing(15),
-  paddingBottom: theme.spacing(10)
+  paddingBottom: theme.spacing(10),
 }));
 
 // ----------------------------------------------------------------------

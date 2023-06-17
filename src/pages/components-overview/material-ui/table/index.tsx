@@ -1,22 +1,24 @@
 // material
+import { Box, Card, CardHeader, Container, Stack } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
-import { Box, Card, Container, CardHeader, Stack } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../../routes/paths';
+
+import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../../components/Page';
-import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../../routes/paths';
+
 //
 import BasicTable from './BasicTable';
 import CollapsibleTable from './collapsible-table';
-import SortingSelecting from './sorting-selecting';
 import GroupingFixedHeader from './GroupingFixedHeader';
+import SortingSelecting from './sorting-selecting';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 export default function TableComponent() {
@@ -27,13 +29,17 @@ export default function TableComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Table"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Table' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Table' },
+            ]}
             moreLink="https://next.material-ui.com/components/tables"
           />
         </Container>

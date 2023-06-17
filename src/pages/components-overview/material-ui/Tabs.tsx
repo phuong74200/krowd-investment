@@ -1,16 +1,17 @@
 import { useState } from 'react';
-// material
-import PhoneIcon from '@material-ui/icons/Phone';
+import { Box, Container, Stack, Tab, Tabs } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
-import { styled } from '@material-ui/core/styles';
-import { Box, Tab, Tabs, Container, Stack } from '@material-ui/core';
+// material
+import PhoneIcon from '@material-ui/icons/Phone';
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -21,13 +22,13 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { mx: '8px !important' }
+  '& > *': { mx: '8px !important' },
 } as const;
 
 const SIMPLE_TAB = [
   { value: '1', icon: <PhoneIcon />, label: 'Item One', disabled: false },
   { value: '2', icon: <FavoriteIcon />, label: 'Item Two', disabled: false },
-  { value: '3', icon: <PersonPinIcon />, label: 'Item Three', disabled: true }
+  { value: '3', icon: <PersonPinIcon />, label: 'Item Three', disabled: true },
 ];
 
 const SCROLLABLE_TAB = [
@@ -37,12 +38,12 @@ const SCROLLABLE_TAB = [
   { value: '4', icon: <PersonPinIcon />, label: 'Item 4' },
   { value: '5', icon: <PersonPinIcon />, label: 'Item 5' },
   { value: '6', icon: <PersonPinIcon />, label: 'Item 6' },
-  { value: '7', icon: <PersonPinIcon />, label: 'Item 7' }
+  { value: '7', icon: <PersonPinIcon />, label: 'Item 7' },
 ];
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 // ----------------------------------------------------------------------
@@ -55,7 +56,10 @@ export default function TabsComponent() {
     setValue(newValue);
   };
 
-  const handleChangeScrollable = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChangeScrollable = (
+    event: React.SyntheticEvent,
+    newValue: string
+  ) => {
     setValueScrollable(newValue);
   };
 
@@ -66,13 +70,17 @@ export default function TabsComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Tabs"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Tabs' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Tabs' },
+            ]}
             moreLink="https://next.material-ui.com/components/tabs"
           />
         </Container>
@@ -85,7 +93,11 @@ export default function TabsComponent() {
               <TabContext value={value}>
                 <TabList onChange={handleChange}>
                   {SIMPLE_TAB.map((tab, index) => (
-                    <Tab key={tab.value} label={tab.label} value={String(index + 1)} />
+                    <Tab
+                      key={tab.value}
+                      label={tab.label}
+                      value={String(index + 1)}
+                    />
                   ))}
                 </TabList>
                 <Box
@@ -95,7 +107,7 @@ export default function TabsComponent() {
                     height: 80,
                     width: '100%',
                     borderRadius: 1,
-                    bgcolor: 'grey.50012'
+                    bgcolor: 'grey.50012',
                   }}
                 >
                   {SIMPLE_TAB.map((panel, index) => (
@@ -138,7 +150,7 @@ export default function TabsComponent() {
                 sx={{
                   flexGrow: 1,
                   width: '100%',
-                  maxWidth: 320
+                  maxWidth: 320,
                 }}
               >
                 <Tabs

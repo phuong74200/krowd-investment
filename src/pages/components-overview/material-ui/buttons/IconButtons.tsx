@@ -1,6 +1,7 @@
 // material
-import AlarmIcon from '@material-ui/icons/Alarm';
 import { Grid, IconButton } from '@material-ui/core';
+import AlarmIcon from '@material-ui/icons/Alarm';
+
 // components
 import { MIconButton } from '../../../../components/@material-extend';
 //
@@ -13,7 +14,7 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { mx: '8px !important' }
+  '& > *': { mx: '8px !important' },
 } as const;
 
 export default function IconButtons() {

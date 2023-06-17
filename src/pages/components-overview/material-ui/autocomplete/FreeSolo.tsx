@@ -1,4 +1,4 @@
-import { TextField, Autocomplete } from '@material-ui/core';
+import { Autocomplete, TextField } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
@@ -16,7 +16,9 @@ export default function FreeSolo({ options }: FreeSoloProps) {
         fullWidth
         freeSolo
         options={options.map((option) => option.title)}
-        renderInput={(params) => <TextField {...params} label="freeSolo" margin="normal" />}
+        renderInput={(params) => (
+          <TextField {...params} label="freeSolo" margin="normal" />
+        )}
       />
       <Autocomplete
         fullWidth

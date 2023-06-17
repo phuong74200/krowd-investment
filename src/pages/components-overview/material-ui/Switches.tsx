@@ -1,19 +1,20 @@
 // material
-import { styled } from '@material-ui/core/styles';
 import {
   Box,
+  Container,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
   Stack,
   Switch,
-  Container,
-  FormGroup,
-  FormControl,
-  FormControlLabel
 } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+import { styled } from '@material-ui/core/styles';
+
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -24,12 +25,12 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { mx: '8px !important' }
+  '& > *': { mx: '8px !important' },
 } as const;
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 // ----------------------------------------------------------------------
@@ -42,13 +43,17 @@ export default function Switches() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Switches"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Switches' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Switches' },
+            ]}
             moreLink="https://next.material-ui.com/components/alert"
           />
         </Container>
@@ -66,7 +71,10 @@ export default function Switches() {
             </Block>
 
             <Block title="Sizes" sx={style}>
-              <FormControlLabel control={<Switch size="small" />} label="Small" />
+              <FormControlLabel
+                control={<Switch size="small" />}
+                label="Small"
+              />
               <FormControlLabel control={<Switch />} label="Normal" />
             </Block>
 
@@ -109,8 +117,14 @@ export default function Switches() {
                   control={<Switch defaultChecked color="default" />}
                   label="Default"
                 />
-                <FormControlLabel control={<Switch defaultChecked />} label="Primary" />
-                <FormControlLabel control={<Switch defaultChecked color="info" />} label="Info" />
+                <FormControlLabel
+                  control={<Switch defaultChecked />}
+                  label="Primary"
+                />
+                <FormControlLabel
+                  control={<Switch defaultChecked color="info" />}
+                  label="Info"
+                />
                 <FormControlLabel
                   control={<Switch defaultChecked color="success" />}
                   label="Success"
@@ -119,13 +133,20 @@ export default function Switches() {
                   control={<Switch defaultChecked color="warning" />}
                   label="Warning"
                 />
-                <FormControlLabel control={<Switch defaultChecked color="error" />} label="Error" />
+                <FormControlLabel
+                  control={<Switch defaultChecked color="error" />}
+                  label="Error"
+                />
                 <FormControlLabel
                   disabled
                   control={<Switch defaultChecked color="error" />}
                   label="Disabled"
                 />
-                <FormControlLabel disabled control={<Switch color="error" />} label="Disabled" />
+                <FormControlLabel
+                  disabled
+                  control={<Switch color="error" />}
+                  label="Disabled"
+                />
               </FormGroup>
             </FormControl>
           </Block>

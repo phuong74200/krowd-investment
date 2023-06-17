@@ -1,13 +1,14 @@
 // material
 import { Container } from '@material-ui/core';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
-// hooks
-import useSettings from '../../hooks/useSettings';
+
+import { BlogNewPostForm } from '../../components/_dashboard/blog';
+import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../components/Page';
-import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-import { BlogNewPostForm } from '../../components/_dashboard/blog';
+// hooks
+import useSettings from '../../hooks/useSettings';
+// routes
+import { PATH_DASHBOARD } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 
@@ -22,7 +23,7 @@ export default function BlogNewPost() {
           links={[
             { name: 'Dashboard', href: PATH_DASHBOARD.root },
             { name: 'Blog', href: PATH_DASHBOARD.blog.root },
-            { name: 'New Post' }
+            { name: 'New Post' },
           ]}
         />
 

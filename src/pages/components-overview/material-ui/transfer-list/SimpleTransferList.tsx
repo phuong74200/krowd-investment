@@ -1,19 +1,19 @@
-import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import arrowIosBackFill from '@iconify/icons-eva/arrow-ios-back-fill';
+import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import arrowheadLeftFill from '@iconify/icons-eva/arrowhead-left-fill';
 import arrowheadRightFill from '@iconify/icons-eva/arrowhead-right-fill';
-import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
+import { Icon } from '@iconify/react';
 // material
 import {
+  Button,
+  Card,
+  Checkbox,
   Grid,
   List,
-  Card,
-  Button,
-  Checkbox,
+  ListItemButton,
   ListItemIcon,
   ListItemText,
-  ListItemButton
 } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
@@ -71,14 +71,18 @@ export default function SimpleTransferList() {
         width: 200,
         height: 220,
         overflow: 'auto',
-        borderRadius: 1.5
+        borderRadius: 1.5,
       }}
     >
       <List dense component="div" role="list">
         {items.map((value: number) => {
           const labelId = `transfer-list-item-${value}-label`;
           return (
-            <ListItemButton key={value} role="listitem" onClick={handleToggle(value)}>
+            <ListItemButton
+              key={value}
+              role="listitem"
+              onClick={handleToggle(value)}
+            >
               <ListItemIcon>
                 <Checkbox
                   checked={checked.indexOf(value) !== -1}
@@ -96,7 +100,12 @@ export default function SimpleTransferList() {
   );
 
   return (
-    <Grid container justifyContent="center" alignItems="center" sx={{ width: 'auto', py: 3 }}>
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      sx={{ width: 'auto', py: 3 }}
+    >
       <Grid item>{customList(left)}</Grid>
       <Grid item>
         <Grid container direction="column" alignItems="center" sx={{ p: 3 }}>

@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import isWeekend from 'date-fns/isWeekend';
 // material
-import { TextField, Stack } from '@material-ui/core';
+import { Stack, TextField } from '@material-ui/core';
 import {
   DatePicker,
-  StaticDatePicker,
+  DesktopDatePicker,
   MobileDatePicker,
-  DesktopDatePicker
+  StaticDatePicker,
 } from '@material-ui/lab';
+import isWeekend from 'date-fns/isWeekend';
+
 //
 import { Block } from '../../Block';
 
@@ -27,7 +28,9 @@ export default function PickerDate() {
             onChange={(newValue) => {
               setValue(newValue);
             }}
-            renderInput={(params) => <TextField fullWidth {...params} margin="normal" />}
+            renderInput={(params) => (
+              <TextField fullWidth {...params} margin="normal" />
+            )}
           />
 
           <MobileDatePicker
@@ -37,7 +40,9 @@ export default function PickerDate() {
             onChange={(newValue) => {
               setValue(newValue);
             }}
-            renderInput={(params) => <TextField fullWidth {...params} margin="normal" />}
+            renderInput={(params) => (
+              <TextField fullWidth {...params} margin="normal" />
+            )}
           />
         </Block>
 
@@ -64,7 +69,12 @@ export default function PickerDate() {
             setValue(newValue);
           }}
           renderInput={(params) => (
-            <TextField {...params} fullWidth margin="normal" helperText={null} />
+            <TextField
+              {...params}
+              fullWidth
+              margin="normal"
+              helperText={null}
+            />
           )}
         />
         <DatePicker
@@ -77,7 +87,12 @@ export default function PickerDate() {
             setValue(newValue);
           }}
           renderInput={(params) => (
-            <TextField {...params} fullWidth margin="normal" helperText={null} />
+            <TextField
+              {...params}
+              fullWidth
+              margin="normal"
+              helperText={null}
+            />
           )}
         />
         <DatePicker
@@ -89,7 +104,12 @@ export default function PickerDate() {
             setValue(newValue);
           }}
           renderInput={(params) => (
-            <TextField {...params} fullWidth margin="normal" helperText={null} />
+            <TextField
+              {...params}
+              fullWidth
+              margin="normal"
+              helperText={null}
+            />
           )}
         />
         <DatePicker
@@ -100,7 +120,12 @@ export default function PickerDate() {
             setValue(newValue);
           }}
           renderInput={(params) => (
-            <TextField {...params} fullWidth margin="normal" helperText={null} />
+            <TextField
+              {...params}
+              fullWidth
+              margin="normal"
+              helperText={null}
+            />
           )}
         />
         <DatePicker
@@ -111,7 +136,12 @@ export default function PickerDate() {
             setValue(newValue);
           }}
           renderInput={(params) => (
-            <TextField {...params} fullWidth margin="normal" helperText={null} />
+            <TextField
+              {...params}
+              fullWidth
+              margin="normal"
+              helperText={null}
+            />
           )}
         />
       </Block>

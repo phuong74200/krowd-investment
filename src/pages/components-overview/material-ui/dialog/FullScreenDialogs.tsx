@@ -1,20 +1,20 @@
 import { forwardRef, useState } from 'react';
-// material
-import CloseIcon from '@material-ui/icons/Close';
 import {
-  List,
-  Slide,
+  AppBar,
   Button,
   Dialog,
-  AppBar,
-  Toolbar,
   Divider,
   IconButton,
-  Typography,
+  List,
+  ListItemButton,
   ListItemText,
-  ListItemButton
+  Slide,
+  Toolbar,
+  Typography,
 } from '@material-ui/core';
 import { TransitionProps } from '@material-ui/core/transitions';
+// material
+import CloseIcon from '@material-ui/icons/Close';
 
 // ----------------------------------------------------------------------
 const Transition = forwardRef(
@@ -42,7 +42,12 @@ export default function FullScreenDialogs() {
         Full Screen Dialogs
       </Button>
 
-      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
+      <Dialog
+        fullScreen
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Transition}
+      >
         <AppBar position="relative">
           <Toolbar>
             <IconButton color="inherit" edge="start" onClick={handleClose}>
@@ -64,7 +69,10 @@ export default function FullScreenDialogs() {
           <Divider />
 
           <ListItemButton>
-            <ListItemText primary="Default notification ringtone" secondary="Tethys" />
+            <ListItemText
+              primary="Default notification ringtone"
+              secondary="Tethys"
+            />
           </ListItemButton>
         </List>
       </Dialog>

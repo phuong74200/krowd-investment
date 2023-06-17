@@ -1,24 +1,25 @@
 import { useState } from 'react';
-import { Icon } from '@iconify/react';
 import awardFill from '@iconify/icons-eva/award-fill';
+import { Icon } from '@iconify/react';
+import {
+  Box,
+  Checkbox,
+  Container,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  Grid,
+} from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import {
-  Box,
-  Grid,
-  Checkbox,
-  FormGroup,
-  Container,
-  FormControl,
-  FormControlLabel
-} from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -29,12 +30,12 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { m: '8px !important' }
+  '& > *': { m: '8px !important' },
 } as const;
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 export default function RadioButtons() {
@@ -59,13 +60,17 @@ export default function RadioButtons() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Checkboxes"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Checkboxes' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Checkboxes' },
+            ]}
             moreLink="https://next.material-ui.com/components/checkboxes"
           />
         </Container>
@@ -88,14 +93,21 @@ export default function RadioButtons() {
 
               <Grid item xs={12}>
                 <Block title="Size & Custom Icon" sx={style}>
-                  <FormControlLabel label="Normal" control={<Checkbox defaultChecked />} />
+                  <FormControlLabel
+                    label="Normal"
+                    control={<Checkbox defaultChecked />}
+                  />
                   <FormControlLabel
                     label="Small"
                     control={<Checkbox defaultChecked size="small" />}
                   />
                   <FormControlLabel
                     control={
-                      <Checkbox color="info" icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+                      <Checkbox
+                        color="info"
+                        icon={<FavoriteBorder />}
+                        checkedIcon={<Favorite />}
+                      />
                     }
                     label="Custom icon"
                   />
@@ -159,9 +171,14 @@ export default function RadioButtons() {
                           control={<Checkbox defaultChecked color="default" />}
                           label="Default"
                         />
-                        <FormControlLabel control={<Checkbox defaultChecked />} label="Primary" />
                         <FormControlLabel
-                          control={<Checkbox defaultChecked color="secondary" />}
+                          control={<Checkbox defaultChecked />}
+                          label="Primary"
+                        />
+                        <FormControlLabel
+                          control={
+                            <Checkbox defaultChecked color="secondary" />
+                          }
                           label="Secondary"
                         />
                         <FormControlLabel
@@ -192,7 +209,13 @@ export default function RadioButtons() {
                       <FormControl component="fieldset">
                         <FormGroup>
                           <FormControlLabel
-                            control={<Checkbox defaultChecked indeterminate color="default" />}
+                            control={
+                              <Checkbox
+                                defaultChecked
+                                indeterminate
+                                color="default"
+                              />
+                            }
                             label="Default"
                           />
                           <FormControlLabel
@@ -200,28 +223,64 @@ export default function RadioButtons() {
                             label="Primary"
                           />
                           <FormControlLabel
-                            control={<Checkbox defaultChecked indeterminate color="secondary" />}
+                            control={
+                              <Checkbox
+                                defaultChecked
+                                indeterminate
+                                color="secondary"
+                              />
+                            }
                             label="Secondary"
                           />
                           <FormControlLabel
-                            control={<Checkbox defaultChecked indeterminate color="info" />}
+                            control={
+                              <Checkbox
+                                defaultChecked
+                                indeterminate
+                                color="info"
+                              />
+                            }
                             label="Info"
                           />
                           <FormControlLabel
-                            control={<Checkbox defaultChecked indeterminate color="success" />}
+                            control={
+                              <Checkbox
+                                defaultChecked
+                                indeterminate
+                                color="success"
+                              />
+                            }
                             label="Success"
                           />
                           <FormControlLabel
-                            control={<Checkbox defaultChecked indeterminate color="warning" />}
+                            control={
+                              <Checkbox
+                                defaultChecked
+                                indeterminate
+                                color="warning"
+                              />
+                            }
                             label="Warning"
                           />
                           <FormControlLabel
-                            control={<Checkbox defaultChecked indeterminate color="error" />}
+                            control={
+                              <Checkbox
+                                defaultChecked
+                                indeterminate
+                                color="error"
+                              />
+                            }
                             label="Error"
                           />
                           <FormControlLabel
                             disabled
-                            control={<Checkbox defaultChecked indeterminate color="error" />}
+                            control={
+                              <Checkbox
+                                defaultChecked
+                                indeterminate
+                                color="error"
+                              />
+                            }
                             label="Disabled"
                           />
                         </FormGroup>
@@ -247,11 +306,21 @@ export default function RadioButtons() {
                     <div>
                       <FormControlLabel
                         label="Child 1"
-                        control={<Checkbox checked={checked[0]} onChange={handleChange2} />}
+                        control={
+                          <Checkbox
+                            checked={checked[0]}
+                            onChange={handleChange2}
+                          />
+                        }
                       />
                       <FormControlLabel
                         label="Child 2"
-                        control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
+                        control={
+                          <Checkbox
+                            checked={checked[1]}
+                            onChange={handleChange3}
+                          />
+                        }
                       />
                     </div>
                   </div>

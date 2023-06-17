@@ -1,7 +1,8 @@
-import { Icon } from '@iconify/react';
 import refreshFill from '@iconify/icons-eva/refresh-fill';
+import { Icon } from '@iconify/react';
 // material
 import { Paper } from '@material-ui/core';
+
 // components
 import { MIconButton } from '../../../../../components/@material-extend';
 
@@ -17,7 +18,7 @@ export default function Toolbar({ onRefresh, ...other }: ToolbarProps) {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
       }}
       {...other}
     >

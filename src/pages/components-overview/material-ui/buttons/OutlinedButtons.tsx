@@ -1,7 +1,8 @@
-import AlarmIcon from '@material-ui/icons/Alarm';
 // material
-import { Grid, Button } from '@material-ui/core';
+import { Button, Grid } from '@material-ui/core';
+import AlarmIcon from '@material-ui/icons/Alarm';
 import { LoadingButton } from '@material-ui/lab';
+
 //
 import { Block } from '../../Block';
 
@@ -12,7 +13,7 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { mx: '8px !important' }
+  '& > *': { mx: '8px !important' },
 } as const;
 
 export default function OutlinedButtons() {
@@ -69,7 +70,11 @@ export default function OutlinedButtons() {
           <LoadingButton loading variant="outlined">
             Submit
           </LoadingButton>
-          <LoadingButton loading loadingIndicator="Loading..." variant="outlined">
+          <LoadingButton
+            loading
+            loadingIndicator="Loading..."
+            variant="outlined"
+          >
             Fetch data
           </LoadingButton>
           <LoadingButton

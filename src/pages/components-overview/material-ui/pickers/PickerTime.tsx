@@ -1,12 +1,13 @@
 import { useState } from 'react';
 // material
-import { TextField, Stack } from '@material-ui/core';
+import { Stack, TextField } from '@material-ui/core';
 import {
-  TimePicker,
+  DesktopTimePicker,
   MobileTimePicker,
   StaticTimePicker,
-  DesktopTimePicker
+  TimePicker,
 } from '@material-ui/lab';
+
 //
 import { Block } from '../../Block';
 
@@ -25,7 +26,9 @@ export default function PickerTime() {
             onChange={(newValue) => {
               setValue(newValue);
             }}
-            renderInput={(params) => <TextField fullWidth {...params} margin="normal" />}
+            renderInput={(params) => (
+              <TextField fullWidth {...params} margin="normal" />
+            )}
           />
           <TimePicker
             ampm={false}
@@ -34,7 +37,9 @@ export default function PickerTime() {
             onChange={(newValue) => {
               setValue(newValue);
             }}
-            renderInput={(params) => <TextField fullWidth {...params} margin="normal" />}
+            renderInput={(params) => (
+              <TextField fullWidth {...params} margin="normal" />
+            )}
           />
         </Block>
 
@@ -46,7 +51,9 @@ export default function PickerTime() {
             onChange={(newValue) => {
               setValue(newValue);
             }}
-            renderInput={(params) => <TextField {...params} fullWidth margin="normal" />}
+            renderInput={(params) => (
+              <TextField {...params} fullWidth margin="normal" />
+            )}
           />
           <DesktopTimePicker
             label="For desktop"
@@ -54,12 +61,16 @@ export default function PickerTime() {
             onChange={(newValue) => {
               setValue(newValue);
             }}
-            renderInput={(params) => <TextField {...params} margin="normal" fullWidth />}
+            renderInput={(params) => (
+              <TextField {...params} margin="normal" fullWidth />
+            )}
           />
           <TimePicker
             value={value}
             onChange={setValue}
-            renderInput={(params) => <TextField {...params} margin="normal" fullWidth />}
+            renderInput={(params) => (
+              <TextField {...params} margin="normal" fullWidth />
+            )}
           />
         </Block>
       </Stack>

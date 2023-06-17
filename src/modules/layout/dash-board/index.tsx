@@ -28,8 +28,6 @@ const MainStyle = styled('div')(({ theme }) => ({
   },
 }));
 
-// ----------------------------------------------------------------------
-
 export default function DashboardLayout() {
   const theme = useTheme();
   const { collapseClick } = useCollapseDrawer();

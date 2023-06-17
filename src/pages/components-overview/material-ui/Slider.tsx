@@ -1,14 +1,15 @@
 import { useState } from 'react';
+import { Box, Container, Grid, Slider, Typography } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import VolumeDown from '@material-ui/icons/VolumeDown';
 // material
 import VolumeUp from '@material-ui/icons/VolumeUp';
-import VolumeDown from '@material-ui/icons/VolumeDown';
-import { styled } from '@material-ui/core/styles';
-import { Box, Grid, Slider, Container, Typography } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -18,7 +19,7 @@ const marks = [
   { value: 0, label: '0°C' },
   { value: 20, label: '20°C' },
   { value: 37, label: '37°C' },
-  { value: 100, label: '100°C' }
+  { value: 100, label: '100°C' },
 ];
 
 const prices = [
@@ -26,7 +27,7 @@ const prices = [
   { value: 25, label: '250' },
   { value: 50, label: '500' },
   { value: 75, label: '750' },
-  { value: 100, label: '1000' }
+  { value: 100, label: '1000' },
 ];
 
 const style = {
@@ -34,12 +35,12 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { mx: '8px !important' }
+  '& > *': { mx: '8px !important' },
 } as const;
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 // ----------------------------------------------------------------------
@@ -79,13 +80,17 @@ export default function SliderComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Slider"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Slider' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Slider' },
+            ]}
             moreLink="https://next.material-ui.com/components/slider"
           />
         </Container>
@@ -216,13 +221,15 @@ export default function SliderComponent() {
                   p: 2,
                   width: '100%',
                   borderRadius: 1,
-                  bgcolor: 'grey.50012'
+                  bgcolor: 'grey.50012',
                 }}
               >
                 <Typography variant="subtitle2" gutterBottom>
                   Min: {valuePrice(price[0])}
                 </Typography>
-                <Typography variant="subtitle2">Max: {valuePrice(price[1])}</Typography>
+                <Typography variant="subtitle2">
+                  Max: {valuePrice(price[1])}
+                </Typography>
               </Box>
             </Block>
           </Grid>

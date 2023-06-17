@@ -29,6 +29,7 @@ const ListSubheaderStyle = styled((props) => (
   marginBottom: theme.spacing(2),
   paddingLeft: theme.spacing(5),
   color: theme.palette.text.primary,
+  fontWeight: theme.typography.fontWeightBold,
 })) as typeof ListSubheader;
 
 const ListItemStyle = styled(ListItemButton)(({ theme }) => ({
@@ -53,13 +54,15 @@ const ListItemStyle = styled(ListItemButton)(({ theme }) => ({
   },
 })) as typeof ListItemButton;
 
-const ListItemIconStyle = styled(ListItemIcon)({
+const ListItemIconStyle = styled(ListItemIcon)(({ theme }) => ({
   width: 22,
   height: 22,
   display: 'flex',
+  minWidth: 'auto',
+  marginRight: theme.spacing(2),
   alignItems: 'center',
   justifyContent: 'center',
-});
+}));
 
 type NavItemProps = {
   title: string;
@@ -106,6 +109,8 @@ function NavItem({
     color: 'text.primary',
     fontWeight: 'fontWeightMedium',
   };
+
+  // return expandable list item if has any children
 
   if (children) {
     return (

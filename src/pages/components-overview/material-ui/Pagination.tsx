@@ -1,12 +1,19 @@
 import { useState } from 'react';
+import {
+  Box,
+  Container,
+  Grid,
+  Pagination,
+  TablePagination,
+} from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Grid, Container, Pagination, TablePagination } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
+
+import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 // components
 import Page from '../../../components/Page';
-import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
+// routes
+import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
@@ -14,7 +21,7 @@ import { Block } from '../Block';
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(15)
+  paddingBottom: theme.spacing(15),
 }));
 
 const style = {
@@ -22,7 +29,7 @@ const style = {
   alignItems: 'center',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  '& > *': { my: 1 }
+  '& > *': { my: 1 },
 } as const;
 
 // ----------------------------------------------------------------------
@@ -31,7 +38,10 @@ export default function PaginationComponent() {
   const [page, setPage] = useState(2);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
-  const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
+  const handleChangePage = (
+    event: React.MouseEvent<HTMLButtonElement> | null,
+    newPage: number
+  ) => {
     setPage(newPage);
   };
 
@@ -49,13 +59,17 @@ export default function PaginationComponent() {
           pt: 6,
           pb: 1,
           mb: 10,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? 'grey.200' : 'grey.800',
         }}
       >
         <Container maxWidth="lg">
           <HeaderBreadcrumbs
             heading="Pagination"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Pagination' }]}
+            links={[
+              { name: 'Components', href: PATH_PAGE.components },
+              { name: 'Pagination' },
+            ]}
             moreLink="https://next.material-ui.com/components/pagination"
           />
         </Container>
@@ -84,7 +98,12 @@ export default function PaginationComponent() {
               <Pagination count={10} shape="rounded" />
               <Pagination count={10} variant="outlined" shape="rounded" />
               <Pagination count={10} shape="rounded" color="primary" />
-              <Pagination count={10} variant="outlined" shape="rounded" color="primary" />
+              <Pagination
+                count={10}
+                variant="outlined"
+                shape="rounded"
+                color="primary"
+              />
             </Block>
           </Grid>
 
@@ -107,7 +126,12 @@ export default function PaginationComponent() {
             <Block title="Ranges" sx={style}>
               <Pagination count={11} defaultPage={6} siblingCount={0} />
               <Pagination count={11} defaultPage={6} />
-              <Pagination count={11} defaultPage={6} siblingCount={0} boundaryCount={2} />
+              <Pagination
+                count={11}
+                defaultPage={6}
+                siblingCount={0}
+                boundaryCount={2}
+              />
               <Pagination count={11} defaultPage={6} boundaryCount={2} />
             </Block>
           </Grid>

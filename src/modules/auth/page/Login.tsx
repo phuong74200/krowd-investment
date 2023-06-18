@@ -1,13 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
-import {
-  Alert,
-  Box,
-  Card,
-  Container,
-  Link,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Box, Card, Container, Link, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
 import MHidden from '@/components/@material-extend/MHidden';
@@ -73,16 +65,16 @@ function Login() {
               <Typography variant="h4" gutterBottom>
                 Sign in to Minimal
               </Typography>
-              <Typography sx={{ color: 'text.secondary' }}>
+              {/* <Typography sx={{ color: 'text.secondary' }}>
                 Enter your details below.
-              </Typography>
+              </Typography> */}
             </Box>
           </Stack>
 
-          <Alert severity="info" sx={{ mb: 3 }}>
+          {/* <Alert severity="info" sx={{ mb: 3 }}>
             Use email : <strong>demo@minimals.cc</strong> / password :
             <strong>&nbsp;demo1234</strong>
-          </Alert>
+          </Alert> */}
 
           <LoginForm />
 

@@ -239,9 +239,7 @@ export default function Router() {
 
 // Authentication
 const Login = Loadable(lazy(() => import('../modules/auth/page/Login')));
-const Register = Loadable(
-  lazy(() => import('../pages/authentication/Register'))
-);
+const Register = Loadable(lazy(() => import('../modules/auth/page/Register')));
 const ResetPassword = Loadable(
   lazy(() => import('../pages/authentication/ResetPassword'))
 );

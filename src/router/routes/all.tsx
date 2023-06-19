@@ -1,7 +1,7 @@
 import Login from '@/modules/auth/page/Login';
+import Register from '@/modules/auth/page/Register';
 import NavSection from '@/modules/layout/components/nav-section';
 import LandingPage from '@/modules/seo/pages/lading';
-import Register from '@/pages/authentication/Register';
 import sidebarConfig from '@/shared/configs/sidebar-config';
 import { AuthRouteObject } from '@/types';
 
@@ -17,11 +17,11 @@ export const allRoute: AuthRouteObject[] = [
     // layout: ({ children }) => <div>layout: {children}</div>,
   },
   {
-    path: '/login',
+    path: '/auth/login',
     element: <Login />,
   },
   {
-    path: '/register',
+    path: '/auth/register',
     element: <Register />,
   },
 ];

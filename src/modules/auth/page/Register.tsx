@@ -3,16 +3,16 @@ import { Box, Card, Container, Link, Typography } from '@mui/material';
 // material
 import { styled } from '@mui/system';
 
-import { MHidden } from '../../components/@material-extend';
-import { RegisterForm } from '../../components/authentication/register';
+import { MHidden } from '../../../components/@material-extend';
+import { RegisterForm } from '../../../components/authentication/register';
 // components
-import Page from '../../components/Page';
+import Page from '../../../components/Page';
 // hooks
 // import useAuth from '../../hooks/useAuth';
 // layouts
-import AuthLayout from '../../layouts/AuthLayout';
+import AuthLayout from '../../../layouts/AuthLayout';
 // routes
-import { PATH_AUTH } from '../../routes/paths';
+import { PATH_AUTH } from '../../../routes/paths';
 
 // ----------------------------------------------------------------------
 

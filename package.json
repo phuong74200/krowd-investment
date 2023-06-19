@@ -15,7 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@iconify/icons-eva": "^1.2.6",
     "@mui/lab": "^5.0.0-alpha.132",
-    "@mui/material": "^5.13.3",
+    "@mui/material": "^5.13.2",
     "axios": "^1.4.0",
     "buffer": "^6.0.3",
     "change-case": "^4.1.2",
@@ -26,6 +26,7 @@
     "highlight.js": "^11.8.0",
     "jsonwebtoken": "^9.0.0",
     "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
     "notistack": "^3.0.1",
     "nprogress": "^0.2.0",
     "process": "^0.11.10",
@@ -35,7 +36,6 @@
     "react-hook-form": "^7.44.3",
     "react-intersection-observer": "^9.4.3",
     "react-router-dom": "^6.11.2",
-    "util": "^0.12.5",
     "yup": "^1.2.0",
     "zustand": "^4.3.8"
   },
@@ -62,7 +62,7 @@
     "lodash": "^4.17.21",
     "numeral": "^2.0.6",
     "prettier": "^2.8.8",
-    "typescript": "^5.0.2",
+    "typescript": "5.0.2",
     "vite": "^4.3.2",
     "vite-plugin-checker": "^0.6.0"
   }

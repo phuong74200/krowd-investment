@@ -1,25 +1,25 @@
-import { capitalCase } from 'change-case';
 import { Link as RouterLink } from 'react-router-dom';
+import { Box, Card, Container, Link, Typography } from '@mui/material';
 // material
-import { styled } from '@material-ui/core/styles';
-import { Box, Card, Link, Container, Typography, Tooltip } from '@material-ui/core';
-// hooks
-import useAuth from '../../hooks/useAuth';
-// routes
-import { PATH_AUTH } from '../../routes/paths';
-// layouts
-import AuthLayout from '../../layouts/AuthLayout';
-// components
-import Page from '../../components/Page';
+import { styled } from '@mui/system';
+
 import { MHidden } from '../../components/@material-extend';
 import { RegisterForm } from '../../components/authentication/register';
+// components
+import Page from '../../components/Page';
+// hooks
+// import useAuth from '../../hooks/useAuth';
+// layouts
+import AuthLayout from '../../layouts/AuthLayout';
+// routes
+import { PATH_AUTH } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
-    display: 'flex'
-  }
+    display: 'flex',
+  },
 }));
 
 const SectionStyle = styled(Card)(({ theme }) => ({
@@ -28,7 +28,7 @@ const SectionStyle = styled(Card)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  margin: theme.spacing(2, 0, 2, 2)
+  margin: theme.spacing(2, 0, 2, 2),
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -38,19 +38,22 @@ const ContentStyle = styled('div')(({ theme }) => ({
   minHeight: '100vh',
   flexDirection: 'column',
   justifyContent: 'center',
-  padding: theme.spacing(12, 0)
+  padding: theme.spacing(12, 0),
 }));
 
 // ----------------------------------------------------------------------
 
 export default function Register() {
-  const { method } = useAuth();
-
   return (
     <RootStyle title="Register | Minimal-UI">
       <AuthLayout>
         Already have an account? &nbsp;
-        <Link underline="none" variant="subtitle2" component={RouterLink} to={PATH_AUTH.login}>
+        <Link
+          underline="none"
+          variant="subtitle2"
+          component={RouterLink}
+          to={PATH_AUTH.login}
+        >
           Login
         </Link>
       </AuthLayout>
@@ -58,9 +61,12 @@ export default function Register() {
       <MHidden width="mdDown">
         <SectionStyle>
           <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-            Manage the job more effectively with Minimal
+            Manage the job more effectively with FunFund
           </Typography>
-          <img alt="register" src="/static/illustrations/illustration_register.png" />
+          <img
+            alt="register"
+            src="/static/illustrations/illustration_register.png"
+          />
         </SectionStyle>
       </MHidden>
 
@@ -75,18 +81,15 @@ export default function Register() {
                 Free forever. No credit card needed.
               </Typography>
             </Box>
-            <Tooltip title={capitalCase(method)}>
-              <Box
-                component="img"
-                src={`/static/auth/ic_${method}.png`}
-                sx={{ width: 32, height: 32 }}
-              />
-            </Tooltip>
           </Box>
 
           <RegisterForm />
 
-          <Typography variant="body2" align="center" sx={{ color: 'text.secondary', mt: 3 }}>
+          <Typography
+            variant="body2"
+            align="center"
+            sx={{ color: 'text.secondary', mt: 3 }}
+          >
             By registering, I agree to Minimal&nbsp;
             <Link underline="always" color="text.primary" href="#">
               Terms of Service

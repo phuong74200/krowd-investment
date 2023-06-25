@@ -1,44 +1,68 @@
 // material
 import { Button } from '@mui/material';
+import { initializeApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
+import { setAuthToken } from '@/constants/interceptors';
+import { useAuthService } from '@/modules/auth/services/auth.service';
 
 // routes
 
 // ----------------------------------------------------------------------
 
-// type userLoginForm = {
-//   username: string;
-//   password: string;
-//   afterSubmit?: string;
-// };
+const firebaseConfig = {
+  apiKey: 'AIzaSyBbAvcC2jLQvAgd2OQBTvAJmwodbqIpBog',
+  authDomain: 'fun-fund-7b641.firebaseapp.com',
+  databaseURL:
+    'https://fun-fund-7b641-default-rtdb.asia-southeast1.firebasedatabase.app',
+  projectId: 'fun-fund-7b641',
+  storageBucket: 'fun-fund-7b641.appspot.com',
+  messagingSenderId: '526397080002',
+  appId: '1:526397080002:web:589f49f0d7e746ca33165b',
+  measurementId: 'G-7YDMHCEBF7',
+};
+
+type userResponse = {
+  enabled: boolean;
+  status: 'FILLING_REQUIRED' | 'APPROVED';
+  userId: number;
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
 export default function LoginForm() {
-  // const [showPassword, setShowPassword] = useState(false);
-
-  // const onSubmit: SubmitHandler<userLoginForm> = async (data) => {
-  //   try {
-  //     console.log(data);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm<userLoginForm>();
-
-  // const handleShowPassword = () => {
-  //   setShowPassword((show) => !show);
-  // };
+  const authService = useAuthService();
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then(async (result) => {
+        const token = await result.user.getIdToken();
+        console.log(token);
+        setAuthToken(token);
+        const res: userResponse = await authService.authenticate();
+        if (res.status === 'FILLING_REQUIRED') {
+          window.location.href = '/auth/register';
+        }
+        if (res.status === 'APPROVED') {
+          const res = await authService.userInfo();
+          // const data: any = await res.json();
+          if (res.roleId === 'ADMIN') {
+            console.log('admin');
+          }
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <Button
       fullWidth
       size="large"
-      // type="submit"
+      onClick={signInWithGoogle}
       variant="contained"
-      href="https://www.google.com"
     >
       Google
     </Button>

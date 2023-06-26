@@ -1,5 +1,4 @@
 import { forwardRef, useState } from 'react';
-// material
 import {
   Button,
   Dialog,
@@ -8,10 +7,8 @@ import {
   DialogContentText,
   DialogTitle,
   Slide,
-} from '@material-ui/core';
-import { TransitionProps } from '@material-ui/core/transitions';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
+import { TransitionProps } from '@mui/material/transitions';
 
 const Transition = forwardRef(
   (

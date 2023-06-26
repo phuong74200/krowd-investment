@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// material
 import {
   Box,
   Checkbox,
@@ -11,16 +10,13 @@ import {
   TableContainer,
   TablePagination,
   TableRow,
-} from '@material-ui/core';
+} from '@mui/material';
 
-// components
 import Scrollbar from '../../../../../components/Scrollbar';
 
 //
 import SortingSelectingHead from './SortingSelectingHead';
 import SortingSelectingToolbar from './SortingSelectingToolbar';
-
-// ----------------------------------------------------------------------
 
 function createData(
   name: string,
@@ -88,8 +84,6 @@ const TABLE_HEAD = [
     label: 'Protein (g)',
   },
 ];
-
-// ----------------------------------------------------------------------
 
 type Anonymous = Record<string | number, string>;
 

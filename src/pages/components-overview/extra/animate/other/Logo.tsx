@@ -1,12 +1,8 @@
-import { Box } from '@material-ui/core';
-// material
-import { useTheme } from '@material-ui/core/styles';
+import { Box } from '@mui/material';
+import { useTheme } from '@mui/material
 import { motion } from 'framer-motion';
 
-// components
 import { varPath } from '../../../../../components/animate';
-
-// ----------------------------------------------------------------------
 
 export default function Logo() {
   const theme = useTheme();

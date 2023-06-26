@@ -1,10 +1,7 @@
-// material
-import { Box, Grid, LinearProgress, Paper } from '@material-ui/core';
+import { Box, Grid, LinearProgress, Paper } from '@mui/material';
 
 //
 import { Label } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   p: 2,
@@ -15,8 +12,6 @@ const style = {
   justifyContent: 'center',
   '& > *': { m: 1 },
 } as const;
-
-// ----------------------------------------------------------------------
 
 type LinearProps = {
   progress: number;

@@ -1,23 +1,18 @@
 import { animated, useSpring } from 'react-spring';
-import { Box, Collapse, Container, Stack } from '@material-ui/core';
-import { alpha, styled, Theme } from '@material-ui/core/styles';
-import { TransitionProps } from '@material-ui/core/transitions';
+import { Box, Collapse, Container, Stack } from '@mui/material';
+import { alpha, styled, Theme } from '@mui/material
+import { TransitionProps } from '@mui/material/transitions';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-// material
 import { TreeItem, TreeView } from '@material-ui/lab';
 import { TreeItemProps } from '@material-ui/lab/TreeItem';
 import { createStyles, withStyles } from '@material-ui/styles';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
@@ -29,8 +24,6 @@ const TreeViewStyle = styled(TreeView)({
   flexGrow: 1,
   maxWidth: 400,
 });
-
-// ----------------------------------------------------------------------
 
 function TransitionComponent(props: TransitionProps) {
   const style = useSpring({

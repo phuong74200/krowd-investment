@@ -11,26 +11,19 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 import faker from 'faker';
 import { sum } from 'lodash';
 
 import { InvoiceToolbar } from '../../components/_dashboard/e-commerce/invoice';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import Label from '../../components/Label';
-// components
 import Page from '../../components/Page';
 import Scrollbar from '../../components/Scrollbar';
-// hooks
 import useSettings from '../../hooks/useSettings';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-// utils
 import { fCurrency } from '../../utils/formatNumber';
-
-// ----------------------------------------------------------------------
 
 const INVOICE = {
   id: faker.datatype.uuid(),
@@ -66,8 +59,6 @@ const RowResultStyle = styled(TableRow)(({ theme }) => ({
     paddingBottom: theme.spacing(1),
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function EcommerceInvoice() {
   const { themeStretch } = useSettings();

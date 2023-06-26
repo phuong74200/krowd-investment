@@ -1,11 +1,8 @@
-// material
-import { Card, CardContent, Container, Grid } from '@material-ui/core';
+import { Card, CardContent, Container, Grid } from '@mui/material';
 
 import Block from '../../../../components/Block';
 import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../../routes/paths';
 
 import Checkboxes from './Checkboxes';
@@ -16,8 +13,6 @@ import FreeSolo from './FreeSolo';
 import MultipleValues from './MultipleValues';
 //
 import Sizes from './Sizes';
-
-// ----------------------------------------------------------------------
 
 export default function AutocompleteComponent() {
   return (

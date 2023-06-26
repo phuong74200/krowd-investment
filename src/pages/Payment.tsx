@@ -5,9 +5,8 @@ import {
   Grid,
   Typography,
   useMediaQuery,
-} from '@material-ui/core';
-// material
-import { styled, useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled, useTheme } from '@mui/material
 import { Form, FormikProvider, useFormik } from 'formik';
 import { useSnackbar } from 'notistack5';
 import * as Yup from 'yup';
@@ -19,20 +18,14 @@ import {
   PaymentMethods,
   PaymentSummary,
 } from '../components/_external-pages/payment';
-// components
 import Page from '../components/Page';
-// utils
 import fakeRequest from '../utils/fakeRequest';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   minHeight: '100%',
   paddingTop: theme.spacing(15),
   paddingBottom: theme.spacing(10),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Payment() {
   const { enqueueSnackbar } = useSnackbar();

@@ -1,26 +1,20 @@
 import { useEffect } from 'react';
 import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
-// material
-import { Container, Grid, Skeleton, Stack } from '@material-ui/core';
+import { Container, Grid, Skeleton, Stack } from '@mui/material';
 
 import {
   KanbanColumn,
   KanbanColumnAdd,
 } from '../../components/_dashboard/kanban';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
 import {
   getBoard,
   persistCard,
   persistColumn,
 } from '../../redux/slices/kanban';
-// redux
 import { RootState, useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const SkeletonLoad = (
   <>
@@ -45,7 +39,6 @@ export default function Kanban() {
   }, [dispatch]);
 
   const onDragEnd = (result: DropResult) => {
-    // Reorder card
     const { destination, source, draggableId, type } = result;
 
     if (!destination) return;

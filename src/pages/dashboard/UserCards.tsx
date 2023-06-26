@@ -1,20 +1,13 @@
 import { useEffect } from 'react';
-// material
-import { Container, Grid, Skeleton } from '@material-ui/core';
+import { Container, Grid, Skeleton } from '@mui/material';
 
 import { UserCard } from '../../components/_dashboard/user/cards';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { getUsers } from '../../redux/slices/user';
-// redux
 import { RootState, useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const SkeletonLoad = (
   <>

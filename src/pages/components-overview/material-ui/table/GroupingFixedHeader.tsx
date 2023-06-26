@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// material
 import {
   Table,
   TableBody,
@@ -8,12 +7,9 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-} from '@material-ui/core';
+} from '@mui/material';
 
-// components
 import Scrollbar from '../../../../components/Scrollbar';
-
-// ----------------------------------------------------------------------
 
 interface Data {
   name: string;
@@ -84,8 +80,6 @@ const COLUMNS: Column[] = [
     format: (value) => value.toFixed(2),
   },
 ];
-
-// ----------------------------------------------------------------------
 
 export default function GroupingFixedHeader() {
   const [page, setPage] = useState(0);

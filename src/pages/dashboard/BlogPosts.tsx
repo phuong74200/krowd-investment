@@ -3,15 +3,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link as RouterLink } from 'react-router-dom';
 import plusFill from '@iconify/icons-eva/plus-fill';
 import { Icon } from '@iconify/react';
-// material
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Skeleton,
-  Stack,
-} from '@material-ui/core';
+import { Box, Button, Container, Grid, Skeleton, Stack } from '@mui/material';
 import { orderBy } from 'lodash';
 
 // @types
@@ -22,25 +14,17 @@ import {
   BlogPostsSort,
 } from '../../components/_dashboard/blog';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { getMorePosts, getPostsInitial } from '../../redux/slices/blog';
-// redux
 import { useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const SORT_OPTIONS = [
   { value: 'latest', label: 'Latest' },
   { value: 'popular', label: 'Popular' },
   { value: 'oldest', label: 'Oldest' },
 ];
-
-// ----------------------------------------------------------------------
 
 const applySort = (posts: Post[], sortBy: string) => {
   if (sortBy === 'latest') {

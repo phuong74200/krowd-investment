@@ -253,7 +253,7 @@ export default function DashboardSidebar({
               ...(collapseHover && {
                 borderRight: 0,
                 backdropFilter: 'blur(6px)',
-                WebkitBackdropFilter: 'blur(6px)', // Fix on Mobile
+                WebkitBackdropFilter: 'blur(6px)',
                 boxShadow: (theme) => theme.customShadows.z20,
                 bgcolor: (theme) =>
                   alpha(theme.palette.background.default, 0.88),

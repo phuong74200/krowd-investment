@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-// material
 import {
   Button,
   Dialog,
@@ -7,10 +6,8 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-} from '@material-ui/core';
-import { DialogProps } from '@material-ui/core/Dialog';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
+import { DialogProps } from '@mui/material/Dialog';
 
 export default function ScrollDialog() {
   const [open, setOpen] = useState(false);

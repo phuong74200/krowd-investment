@@ -1,19 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-// material
-import { FormHelperText, OutlinedInput, Stack } from '@material-ui/core';
 import { LoadingButton } from '@material-ui/lab';
+import { FormHelperText, OutlinedInput, Stack } from '@mui/material';
 import { Form, FormikProvider, useFormik } from 'formik';
 import { useSnackbar } from 'notistack5';
 import * as Yup from 'yup';
 
-// routes
 import { PATH_DASHBOARD } from '../../../routes/paths';
-// utils
 import fakeRequest from '../../../utils/fakeRequest';
 
-// ----------------------------------------------------------------------
-
-// eslint-disable-next-line consistent-return
 function maxLength(object: any) {
   if (object.target.value.length > object.target.maxLength) {
     return (object.target.value = object.target.value.slice(

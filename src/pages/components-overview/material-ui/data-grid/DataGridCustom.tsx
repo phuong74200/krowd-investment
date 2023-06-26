@@ -1,15 +1,6 @@
 import checkmarkCircle2Fill from '@iconify/icons-eva/checkmark-circle-2-fill';
 import moreVerticalFill from '@iconify/icons-eva/more-vertical-fill';
 import { Icon } from '@iconify/react';
-// material
-import {
-  Box,
-  LinearProgress,
-  Pagination,
-  Rating,
-  Stack,
-  Typography,
-} from '@material-ui/core';
 import {
   DataGrid,
   getGridNumericColumnOperators,
@@ -18,20 +9,23 @@ import {
   GridToolbar,
   useGridSlotComponentProps,
 } from '@material-ui/data-grid';
+import {
+  Box,
+  LinearProgress,
+  Pagination,
+  Rating,
+  Stack,
+  Typography,
+} from '@mui/material';
 import faker from 'faker';
 import { sample } from 'lodash';
 
 import { MAvatar, MIconButton } from '../../../../components/@material-extend';
-// components
 import Label from '../../../../components/Label';
-// utils
 import createAvatar from '../../../../utils/createAvatar';
 import { fPercent } from '../../../../utils/formatNumber';
 
-// ----------------------------------------------------------------------
-
 const columns: GridColDef[] = [
-  // OPTIONS
   // https://material-ui.com/api/data-grid/grid-col-def/#main-content
   // - hide: false (default)
   // - editable: false (default)
@@ -39,8 +33,6 @@ const columns: GridColDef[] = [
   // - sortable: true (default)
   // - disableColumnMenu: false (default)
 
-  // FIELD TYPES
-  // --------------------
   // 'string' (default)
   // 'number'
   // 'date'
@@ -223,8 +215,6 @@ const rows = [...Array(100)].map((_, index) => {
     isAdmin: faker.datatype.boolean(),
   };
 });
-
-// ----------------------------------------------------------------------
 
 function CustomPagination() {
   const { state, apiRef } = useGridSlotComponentProps();

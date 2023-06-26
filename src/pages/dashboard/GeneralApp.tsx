@@ -1,5 +1,4 @@
-// material
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid } from '@mui/material';
 
 import {
   AppAreaInstalled,
@@ -16,13 +15,9 @@ import {
   AppWidgets1,
   AppWidgets2,
 } from '../../components/_dashboard/general-app';
-// components
 import Page from '../../components/Page';
-// hooks
 import useAuth from '../../hooks/useAuth';
 import useSettings from '../../hooks/useSettings';
-
-// ----------------------------------------------------------------------
 
 export default function GeneralApp() {
   const { themeStretch } = useSettings();

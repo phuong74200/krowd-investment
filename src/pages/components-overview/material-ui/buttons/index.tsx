@@ -1,13 +1,10 @@
 import { useState } from 'react';
-import { Box, Container, Tab } from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+import { Box, Container, Tab } from '@mui/material';
+import { styled } from '@mui/material
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
 
 import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../../routes/paths';
 
 import ButtonGroups from './ButtonGroups';
@@ -18,8 +15,6 @@ import OutlinedButtons from './OutlinedButtons';
 //
 import TextButtons from './TextButtons';
 import ToggleButtons from './ToggleButtons';
-
-// ----------------------------------------------------------------------
 
 const BUTTONS = [
   { name: 'Contained Buttons', component: <ContainedButtons /> },
@@ -35,8 +30,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
   paddingBottom: theme.spacing(15),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function ButtonsComponent() {
   const [value, setValue] = useState('1');

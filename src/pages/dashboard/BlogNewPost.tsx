@@ -1,16 +1,10 @@
-// material
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 
 import { BlogNewPostForm } from '../../components/_dashboard/blog';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 export default function BlogNewPost() {
   const { themeStretch } = useSettings();

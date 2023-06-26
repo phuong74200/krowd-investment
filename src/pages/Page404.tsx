@@ -1,15 +1,11 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Button, Container, Typography } from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+import { Box, Button, Container, Typography } from '@mui/material';
+import { styled } from '@mui/material
 import { motion } from 'framer-motion';
 
 import { PageNotFoundIllustration } from '../assets';
-// components
 import { MotionContainer, varBounceIn } from '../components/animate';
 import Page from '../components/Page';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   display: 'flex',
@@ -18,8 +14,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(15),
   paddingBottom: theme.spacing(10),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Page404() {
   return (

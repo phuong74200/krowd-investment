@@ -1,13 +1,10 @@
 import { useState } from 'react';
-import { Box, Container, Tab } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
-// material
+import { Box, Container, Tab } from '@mui/material';
+import { styled } from '@mui/material
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
 
 import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../../routes/paths';
 
 //
@@ -15,8 +12,6 @@ import PickerDate from './PickerDate';
 import PickerDateRange from './PickerDateRange';
 import PickerDateTime from './PickerDateTime';
 import PickerTime from './PickerTime';
-
-// ----------------------------------------------------------------------
 
 const PICKERS = [
   { name: 'Date', component: <PickerDate /> },
@@ -29,8 +24,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
   paddingBottom: theme.spacing(15),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function PickersComponent() {
   const [value, setValue] = useState('1');

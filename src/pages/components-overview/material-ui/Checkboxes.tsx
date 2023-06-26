@@ -9,21 +9,16 @@ import {
   FormControlLabel,
   FormGroup,
   Grid,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   display: 'flex',

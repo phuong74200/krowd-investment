@@ -1,6 +1,4 @@
-import { Autocomplete, TextField } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+import { Autocomplete, TextField } from '@mui/material';
 
 type ComboBoxProps = {
   options: {

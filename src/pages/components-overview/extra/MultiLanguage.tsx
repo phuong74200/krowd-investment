@@ -10,19 +10,13 @@ import {
   Stack,
   TablePagination,
   Typography,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// hooks
 import useLocales from '../../../hooks/useLocales';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),

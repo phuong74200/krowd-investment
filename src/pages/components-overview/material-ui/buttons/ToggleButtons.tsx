@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { Grid, ToggleButton, ToggleButtonGroup } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-// material
 import CheckIcon from '@material-ui/icons/Check';
 import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
 import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
@@ -14,11 +12,10 @@ import FormatUnderlinedIcon from '@material-ui/icons/FormatUnderlined';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import ViewModuleIcon from '@material-ui/icons/ViewModule';
 import ViewQuiltIcon from '@material-ui/icons/ViewQuilt';
+import { Grid, ToggleButton, ToggleButtonGroup } from '@mui/material';
 
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   display: 'flex',

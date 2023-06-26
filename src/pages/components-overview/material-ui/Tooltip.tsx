@@ -1,4 +1,3 @@
-// material
 import {
   Box,
   Button,
@@ -9,21 +8,17 @@ import {
   IconButton,
   Tooltip,
   Zoom,
-} from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 import { MFab, MIconButton } from '../../../components/@material-extend';
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const LONG_TEXT = `
 Aliquam eget finibus ante, non facilisis lectus. Sed vitae dignissim est, vel aliquam tellus.
@@ -43,8 +38,6 @@ const style = {
   flexWrap: 'wrap',
   '& > *': { m: '8px !important' },
 } as const;
-// ----------------------------------------------------------------------
-
 export default function TooltipsComponent() {
   return (
     <RootStyle title="Components: Tooltip | Minimal-UI">

@@ -1,4 +1,3 @@
-// material
 import {
   Box,
   Card,
@@ -6,10 +5,9 @@ import {
   CardHeader,
   Container,
   Grid,
-} from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 
-// components
 import {
   CarouselAnimation,
   CarouselBasic1,
@@ -21,10 +19,7 @@ import {
 } from '../../../components/carousel';
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),

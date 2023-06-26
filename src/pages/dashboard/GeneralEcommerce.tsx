@@ -1,5 +1,4 @@
-// material
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid } from '@mui/material';
 
 import {
   EcommerceBestSalesman,
@@ -14,12 +13,8 @@ import {
   EcommerceWelcome,
   EcommerceYearlySales,
 } from '../../components/_dashboard/general-ecommerce';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
-
-// ----------------------------------------------------------------------
 
 export default function GeneralEcommerce() {
   const { themeStretch } = useSettings();

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// material
 import {
   Box,
   Button,
@@ -9,9 +8,7 @@ import {
   StepLabel,
   Stepper,
   Typography,
-} from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
 
 const steps = [
   {

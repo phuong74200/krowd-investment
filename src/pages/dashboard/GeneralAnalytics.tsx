@@ -1,5 +1,4 @@
-// material
-import { Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography } from '@mui/material';
 
 import {
   AnalyticsBugReports,
@@ -15,12 +14,8 @@ import {
   AnalyticsWebsiteVisits,
   AnalyticsWeeklySales,
 } from '../../components/_dashboard/general-analytics';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
-
-// ----------------------------------------------------------------------
 
 export default function GeneralAnalytics() {
   const { themeStretch } = useSettings();

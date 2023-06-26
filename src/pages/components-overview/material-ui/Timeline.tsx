@@ -1,7 +1,6 @@
-import { Box, Container, Grid, Paper, Typography } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Box, Container, Grid, Paper, Typography } from '@mui/material';
+import { styled } from '@mui/material
 import FastfoodIcon from '@material-ui/icons/Fastfood';
-// material
 import HotelIcon from '@material-ui/icons/Hotel';
 import LaptopMacIcon from '@material-ui/icons/LaptopMac';
 import RepeatIcon from '@material-ui/icons/Repeat';
@@ -17,14 +16,10 @@ import {
 import { last, slice } from 'lodash';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 type TimelineType = {
   key: number;
@@ -105,8 +100,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
   paddingBottom: theme.spacing(15),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function TimelineComponent() {
   const lastItem = last(TIMELINES)?.key;

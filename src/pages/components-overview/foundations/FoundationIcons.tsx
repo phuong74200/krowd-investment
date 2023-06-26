@@ -4,10 +4,9 @@ import chargingFill from '@iconify/icons-eva/charging-fill';
 import clockFill from '@iconify/icons-eva/clock-fill';
 import colorPaletteFill from '@iconify/icons-eva/color-palette-fill';
 import { Icon } from '@iconify/react';
-import { Box, Container, Stack, SvgIcon } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Box, Container, Stack, SvgIcon } from '@mui/material';
+import { styled } from '@mui/material
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-// material
 import AdbIcon from '@material-ui/icons/Adb';
 import AddIcon from '@material-ui/icons/Add';
 import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
@@ -15,17 +14,13 @@ import AppleIcon from '@material-ui/icons/Apple';
 
 import CodeSnippets from '../../../components/CodeSnippets';
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
 import SvgIconStyle from '../../../components/SvgIconStyle';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
 import { iconify, local, material } from './data';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
@@ -39,8 +34,6 @@ const style = {
   flexWrap: 'wrap',
   '& > *': { m: '8px !important' },
 } as const;
-
-// ----------------------------------------------------------------------
 
 export default function FoundationIcons() {
   return (

@@ -1,22 +1,15 @@
 import { useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
-// material
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import { paramCase } from 'change-case';
 
 import UserNewForm from '../../components/_dashboard/user/UserNewForm';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { getUserList } from '../../redux/slices/user';
-// redux
 import { RootState, useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 export default function UserCreate() {
   const { themeStretch } = useSettings();

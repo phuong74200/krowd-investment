@@ -9,18 +9,13 @@ import {
   IconButton,
   Tooltip,
   Typography,
-} from '@material-ui/core';
-// material
-import { hexToRgb, styled, useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { hexToRgb, styled, useTheme } from '@mui/material
 import { useSnackbar } from 'notistack5';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const COLORS = ['primary', 'info', 'success', 'warning', 'error'] as const;
 const COLORS_VARIATIONS = [
@@ -52,8 +47,6 @@ const RowStyle = styled('div')(({ theme }) => ({
   flexWrap: 'wrap',
   margin: theme.spacing(1.5, -1.5, 0),
 }));
-
-// ----------------------------------------------------------------------
 
 type ColorCardProps = {
   hexColor: string;

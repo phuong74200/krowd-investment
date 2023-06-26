@@ -1,10 +1,7 @@
-// material
-import { Button, ButtonGroup, Grid } from '@material-ui/core';
+import { Button, ButtonGroup, Grid } from '@mui/material';
 
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   display: 'flex',

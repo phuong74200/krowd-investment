@@ -1,4 +1,3 @@
-// material
 import {
   Box,
   Container,
@@ -6,16 +5,13 @@ import {
   Stack,
   Switch,
   Typography,
-} from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 
 //
 import { PlanFreeIcon, PlanPremiumIcon, PlanStarterIcon } from '../assets';
 import { PricingPlanCard } from '../components/_external-pages/pricing';
-// components
 import Page from '../components/Page';
-
-// ----------------------------------------------------------------------
 
 const PLANS = [
   {
@@ -67,8 +63,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(15),
   paddingBottom: theme.spacing(10),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Pricing() {
   return (

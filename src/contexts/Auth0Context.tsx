@@ -11,8 +11,6 @@ import {
 //
 import { auth0Config } from '../config';
 
-// ----------------------------------------------------------------------
-
 let auth0Client: Auth0Client | null = null;
 
 const initialState: AuthState = {

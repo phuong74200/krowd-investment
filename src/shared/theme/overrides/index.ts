@@ -48,8 +48,6 @@ import Tooltip from './tooltip';
 import TreeView from './tree-view';
 import Typography from './typography';
 
-// ----------------------------------------------------------------------
-
 export default function ComponentsOverrides(theme: Theme) {
   return merge(
     Fab(theme),

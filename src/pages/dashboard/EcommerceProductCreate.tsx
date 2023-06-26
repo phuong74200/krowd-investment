@@ -1,24 +1,17 @@
 import { useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
-// material
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import { paramCase } from 'change-case';
 
 // @types
 import { ProductState } from '../../@types/products';
 import ProductNewForm from '../../components/_dashboard/e-commerce/ProductNewForm';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { getProducts } from '../../redux/slices/product';
-// redux
 import { useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 export default function EcommerceProductCreate() {
   const { themeStretch } = useSettings();

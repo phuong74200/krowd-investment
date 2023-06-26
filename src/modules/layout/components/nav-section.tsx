@@ -110,8 +110,6 @@ function NavItem({
     fontWeight: 'fontWeightMedium',
   };
 
-  // return expandable list item if has any children
-
   if (children) {
     return (
       <>

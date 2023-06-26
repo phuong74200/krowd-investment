@@ -3,13 +3,10 @@ import alertTriangleFill from '@iconify/icons-eva/alert-triangle-fill';
 import checkmarkCircle2Fill from '@iconify/icons-eva/checkmark-circle-2-fill';
 import infoFill from '@iconify/icons-eva/info-fill';
 import { Icon } from '@iconify/react';
-// material
 import { Theme } from '@mui/material';
 
 // @types
 import { ColorSchema } from '@/types/theme';
-
-// ----------------------------------------------------------------------
 
 export default function Alert(theme: Theme) {
   const isLight = theme.palette.mode === 'light';

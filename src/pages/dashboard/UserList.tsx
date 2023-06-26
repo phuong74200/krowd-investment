@@ -16,9 +16,8 @@ import {
   TablePagination,
   TableRow,
   Typography,
-} from '@material-ui/core';
-// material
-import { useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { useTheme } from '@mui/material
 import { sentenceCase } from 'change-case';
 import { filter } from 'lodash';
 
@@ -31,19 +30,13 @@ import {
 } from '../../components/_dashboard/user/list';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import Label from '../../components/Label';
-// components
 import Page from '../../components/Page';
 import Scrollbar from '../../components/Scrollbar';
 import SearchNotFound from '../../components/SearchNotFound';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { deleteUser, getUserList } from '../../redux/slices/user';
-// redux
 import { RootState, useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
   { id: 'name', label: 'Name', alignRight: false },
@@ -53,8 +46,6 @@ const TABLE_HEAD = [
   { id: 'status', label: 'Status', alignRight: false },
   { id: '' },
 ];
-
-// ----------------------------------------------------------------------
 
 type Anonymous = Record<string | number, string>;
 

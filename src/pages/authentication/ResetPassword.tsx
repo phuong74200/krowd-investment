@@ -1,20 +1,14 @@
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Button, Container, Typography } from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+import { Box, Button, Container, Typography } from '@mui/material';
+import { styled } from '@mui/material
 
 //
 import { SentIcon } from '../../assets';
 import { ResetPasswordForm } from '../../components/authentication/reset-password';
-// components
 import Page from '../../components/Page';
-// layouts
 import LogoOnlyLayout from '../../layouts/LogoOnlyLayout';
-// routes
 import { PATH_AUTH } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   display: 'flex',
@@ -23,8 +17,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   justifyContent: 'center',
   padding: theme.spacing(12, 0),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function ResetPassword() {
   const [email, setEmail] = useState('');

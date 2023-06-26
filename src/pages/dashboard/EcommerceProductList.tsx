@@ -14,9 +14,8 @@ import {
   TablePagination,
   TableRow,
   Typography,
-} from '@material-ui/core';
-// material
-import { styled, useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled, useTheme } from '@mui/material
 import { sentenceCase } from 'change-case';
 import { filter } from 'lodash';
 
@@ -28,22 +27,15 @@ import {
 } from '../../components/_dashboard/e-commerce/product-list';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import Label from '../../components/Label';
-// components
 import Page from '../../components/Page';
 import Scrollbar from '../../components/Scrollbar';
 import SearchNotFound from '../../components/SearchNotFound';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { getProducts } from '../../redux/slices/product';
-// redux
 import { useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
 import { fCurrency } from '../../utils/formatNumber';
-// utils
 import { fDate } from '../../utils/formatTime';
-
-// ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
   { id: 'name', label: 'Product', alignRight: false },
@@ -60,8 +52,6 @@ const ThumbImgStyle = styled('img')(({ theme }) => ({
   margin: theme.spacing(0, 2),
   borderRadius: theme.shape.borderRadiusSm,
 }));
-
-// ----------------------------------------------------------------------
 
 function descendingComparator(a: Anonymous, b: Anonymous, orderBy: string) {
   if (b[orderBy] < a[orderBy]) {
@@ -103,8 +93,6 @@ function applySortFilter(
 
   return stabilizedThis.map((el) => el[0]);
 }
-
-// ----------------------------------------------------------------------
 
 export default function EcommerceProductList() {
   const { themeStretch } = useSettings();

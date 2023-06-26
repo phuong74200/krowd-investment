@@ -1,6 +1,4 @@
-import { Autocomplete, Checkbox, TextField } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+import { Autocomplete, Checkbox, TextField } from '@mui/material';
 
 type CheckboxesProps = {
   options: {

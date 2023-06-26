@@ -13,9 +13,8 @@ import {
   Skeleton,
   Tab,
   Typography,
-} from '@material-ui/core';
-// material
-import { alpha, styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { alpha, styled } from '@mui/material
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
 import { sentenceCase } from 'change-case';
 
@@ -29,17 +28,11 @@ import {
 } from '../../components/_dashboard/e-commerce/product-details';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import Markdown from '../../components/Markdown';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { addCart, getProduct, onGotoStep } from '../../redux/slices/product';
-// redux
 import { useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const PRODUCT_DESCRIPTION = [
   {
@@ -71,8 +64,6 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
   color: theme.palette.primary.main,
   backgroundColor: `${alpha(theme.palette.primary.main, 0.08)}`,
 }));
-
-// ----------------------------------------------------------------------
 
 const SkeletonLoad = (
   <Grid container spacing={3}>

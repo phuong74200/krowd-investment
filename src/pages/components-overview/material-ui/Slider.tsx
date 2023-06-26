@@ -1,19 +1,14 @@
 import { useState } from 'react';
-import { Box, Container, Grid, Slider, Typography } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Box, Container, Grid, Slider, Typography } from '@mui/material';
+import { styled } from '@mui/material
 import VolumeDown from '@material-ui/icons/VolumeDown';
-// material
 import VolumeUp from '@material-ui/icons/VolumeUp';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const marks = [
   { value: 0, label: '0°C' },
@@ -42,8 +37,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
   paddingBottom: theme.spacing(15),
 }));
-
-// ----------------------------------------------------------------------
 
 function valuePrice(value: number) {
   return value > 0 ? `$${value}0` : `${value}`;

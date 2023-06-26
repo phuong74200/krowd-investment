@@ -1,12 +1,8 @@
 import refreshFill from '@iconify/icons-eva/refresh-fill';
 import { Icon } from '@iconify/react';
-// material
-import { Box, FormControlLabel, Paper, Switch } from '@material-ui/core';
+import { Box, FormControlLabel, Paper, Switch } from '@mui/material';
 
-// components
 import { MIconButton } from '../../../../../components/@material-extend';
-
-// ----------------------------------------------------------------------
 
 type ToolbarProps = {
   isText: boolean;

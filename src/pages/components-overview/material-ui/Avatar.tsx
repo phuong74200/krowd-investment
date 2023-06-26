@@ -1,4 +1,3 @@
-// material
 import {
   Avatar,
   AvatarGroup,
@@ -6,8 +5,8 @@ import {
   Box,
   Container,
   Grid,
-} from '@material-ui/core';
-import { styled, useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled, useTheme } from '@mui/material
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import FolderIcon from '@material-ui/icons/Folder';
 import PageviewIcon from '@material-ui/icons/Pageview';
@@ -15,20 +14,15 @@ import PageviewIcon from '@material-ui/icons/Pageview';
 import { MAvatar } from '../../../components/@material-extend';
 import BadgeStatus from '../../../components/BadgeStatus';
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
 
-// ----------------------------------------------------------------------
-
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
   paddingBottom: theme.spacing(15),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function AvatarComponent() {
   const theme = useTheme();

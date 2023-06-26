@@ -4,6 +4,7 @@ import { styled, useTheme } from '@mui/material';
 
 import useCollapseDrawer from '@/shared/hooks/use-collapse-drawer';
 
+import DashboardNavbar from './navbar';
 import DashboardSidebar from './sidebar';
 
 const APP_BAR_MOBILE = 64;
@@ -35,7 +36,7 @@ export default function DashboardLayout() {
 
   return (
     <RootStyle>
-      {/* <DashboardNavbar onOpenSidebar={() => setOpen(true)} /> */}
+      <DashboardNavbar onOpenSidebar={() => setOpen(true)} />
       <DashboardSidebar
         isOpenSidebar={open}
         onCloseSidebar={() => setOpen(false)}

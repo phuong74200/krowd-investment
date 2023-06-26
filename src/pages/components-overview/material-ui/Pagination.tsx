@@ -5,19 +5,14 @@ import {
   Grid,
   Pagination,
   TablePagination,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
@@ -31,8 +26,6 @@ const style = {
   flexWrap: 'wrap',
   '& > *': { my: 1 },
 } as const;
-
-// ----------------------------------------------------------------------
 
 export default function PaginationComponent() {
   const [page, setPage] = useState(2);

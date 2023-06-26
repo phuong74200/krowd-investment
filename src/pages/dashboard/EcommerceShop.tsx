@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
-// material
 import {
   Backdrop,
   CircularProgress,
   Container,
   Stack,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import { useFormik } from 'formik';
 import { filter, includes, orderBy } from 'lodash';
 
@@ -20,26 +19,18 @@ import {
   ShopTagFiltered,
 } from '../../components/_dashboard/e-commerce/shop';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { filterProducts, getProducts } from '../../redux/slices/product';
-// redux
 import { useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-// utils
 import fakeRequest from '../../utils/fakeRequest';
-
-// ----------------------------------------------------------------------
 
 function applyFilter(
   products: Product[],
   sortBy: string | null,
   filters: ProductFilter
 ) {
-  // SORT BY
   if (sortBy === 'featured') {
     products = orderBy(products, ['sold'], ['desc']);
   }
@@ -52,7 +43,6 @@ function applyFilter(
   if (sortBy === 'priceAsc') {
     products = orderBy(products, ['price'], ['asc']);
   }
-  // FILTER PRODUCTS
   if (filters.gender.length > 0) {
     products = filter(products, (_product) =>
       includes(filters.gender, _product.gender)

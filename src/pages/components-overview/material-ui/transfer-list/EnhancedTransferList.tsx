@@ -2,7 +2,6 @@ import { useState } from 'react';
 import arrowIosBackFill from '@iconify/icons-eva/arrow-ios-back-fill';
 import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import { Icon } from '@iconify/react';
-// material
 import {
   Button,
   Card,
@@ -14,9 +13,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-} from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
 
 function not(a: number[], b: number[]) {
   return a.filter((value) => b.indexOf(value) === -1);

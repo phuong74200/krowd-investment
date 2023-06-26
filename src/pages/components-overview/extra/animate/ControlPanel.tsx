@@ -1,4 +1,3 @@
-// material
 import {
   Box,
   FormControlLabel,
@@ -7,12 +6,9 @@ import {
   Radio,
   RadioGroup,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 
-// components
 import Scrollbar from '../../../../components/Scrollbar';
-
-// ----------------------------------------------------------------------
 
 interface ControlPanelProps extends PaperProps {
   variantTypes: {

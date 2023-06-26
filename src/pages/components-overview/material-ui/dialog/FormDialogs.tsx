@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// material
 import {
   Button,
   Dialog,
@@ -8,9 +7,7 @@ import {
   DialogContentText,
   DialogTitle,
   TextField,
-} from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
 
 export default function FormDialogs() {
   const [open, setOpen] = useState(false);

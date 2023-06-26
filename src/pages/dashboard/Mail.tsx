@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// material
-import { Card, Container } from '@material-ui/core';
+import { Card, Container } from '@mui/material';
 
 import {
   MailCompose,
@@ -10,17 +9,11 @@ import {
   MailSidebar,
 } from '../../components/_dashboard/mail';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { getLabels } from '../../redux/slices/mail';
-// redux
 import { useDispatch } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 export default function Mail() {
   const { themeStretch } = useSettings();

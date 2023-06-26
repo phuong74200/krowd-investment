@@ -2,7 +2,6 @@ import { useState } from 'react';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
 import { Icon } from '@iconify/react';
-// material
 import {
   Box,
   Collapse,
@@ -13,11 +12,9 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { createData } from '.';
-
-// ----------------------------------------------------------------------
 
 export default function CollapsibleTableRow(props: {
   row: ReturnType<typeof createData>;

@@ -1,4 +1,3 @@
-// material
 import {
   Table,
   TableBody,
@@ -6,15 +5,12 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from '@material-ui/core';
+} from '@mui/material';
 
-// components
 import Scrollbar from '../../../../../components/Scrollbar';
 
 //
 import CollapsibleTableRow from './CollapsibleTableRow';
-
-// ----------------------------------------------------------------------
 
 export function createData(
   name: string,

@@ -22,12 +22,8 @@ import {
 } from '../@types/authentication';
 //
 import { cognitoConfig } from '../config';
-// routes
 import { PATH_AUTH } from '../routes/paths';
-// utils
 import axios from '../utils/axios';
-
-// ----------------------------------------------------------------------
 
 // CAUTION: User Cognito is slily difference from firebase, so be sure to read the doc carefully.
 
@@ -191,7 +187,6 @@ function AuthProvider({ children }: { children: ReactNode }) {
     [getSession]
   );
 
-  // same thing here
   const logout = () => {
     const user = UserPool.getCurrentUser();
     if (user) {

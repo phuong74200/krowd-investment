@@ -21,8 +21,6 @@ import {
 //
 import { firebaseConfig } from '../config';
 
-// ----------------------------------------------------------------------
-
 const ADMIN_EMAILS = ['demo@minimals.cc'];
 
 if (!firebase.apps.length) {

@@ -5,8 +5,7 @@ import roundAccountBox from '@iconify/icons-ic/round-account-box';
 import roundReceipt from '@iconify/icons-ic/round-receipt';
 import roundVpnKey from '@iconify/icons-ic/round-vpn-key';
 import { Icon } from '@iconify/react';
-// material
-import { Box, Container, Tab, Tabs } from '@material-ui/core';
+import { Box, Container, Tab, Tabs } from '@mui/material';
 import { capitalCase } from 'change-case';
 
 import {
@@ -17,9 +16,7 @@ import {
   AccountSocialLinks,
 } from '../../components/_dashboard/user/account';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import {
   getAddressBook,
@@ -28,12 +25,8 @@ import {
   getNotifications,
   getProfile,
 } from '../../redux/slices/user';
-// redux
 import { RootState, useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 export default function UserAccount() {
   const { themeStretch } = useSettings();

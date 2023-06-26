@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// material
 import {
   Button,
   Dialog,
@@ -7,9 +6,7 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-} from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
 
 export default function AlertDialog() {
   const [open, setOpen] = useState(false);

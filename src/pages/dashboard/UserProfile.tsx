@@ -4,9 +4,8 @@ import peopleFill from '@iconify/icons-eva/people-fill';
 import roundAccountBox from '@iconify/icons-ic/round-account-box';
 import roundPermMedia from '@iconify/icons-ic/round-perm-media';
 import { Icon } from '@iconify/react';
-import { Box, Card, Container, Tab, Tabs } from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+import { Box, Card, Container, Tab, Tabs } from '@mui/material';
+import { styled } from '@mui/material
 import { capitalCase } from 'change-case';
 
 import {
@@ -17,9 +16,7 @@ import {
   ProfileGallery,
 } from '../../components/_dashboard/user/profile';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useAuth from '../../hooks/useAuth';
 import useSettings from '../../hooks/useSettings';
 import {
@@ -30,12 +27,8 @@ import {
   getProfile,
   onToggleFollow,
 } from '../../redux/slices/user';
-// redux
 import { RootState, useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const TabsWrapperStyle = styled('div')(({ theme }) => ({
   zIndex: 9,
@@ -52,8 +45,6 @@ const TabsWrapperStyle = styled('div')(({ theme }) => ({
     paddingRight: theme.spacing(3),
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function UserProfile() {
   const { themeStretch } = useSettings();

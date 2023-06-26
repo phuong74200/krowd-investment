@@ -1,3 +1,4 @@
+import { visuallyHidden } from '@material-ui/utils';
 import {
   Box,
   Checkbox,
@@ -5,10 +6,7 @@ import {
   TableHead,
   TableRow,
   TableSortLabel,
-} from '@material-ui/core';
-import { visuallyHidden } from '@material-ui/utils';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
 
 type SortingSelectingHeadProps = {
   orderBy: string;

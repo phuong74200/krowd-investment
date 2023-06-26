@@ -1,19 +1,13 @@
 import { Link as RouterLink } from 'react-router-dom';
 import arrowIosBackFill from '@iconify/icons-eva/arrow-ios-back-fill';
 import { Icon } from '@iconify/react';
-import { Box, Button, Container, Link, Typography } from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+import { Box, Button, Container, Link, Typography } from '@mui/material';
+import { styled } from '@mui/material
 
 import { VerifyCodeForm } from '../../components/authentication/verify-code';
-// components
 import Page from '../../components/Page';
-// layouts
 import LogoOnlyLayout from '../../layouts/LogoOnlyLayout';
-// routes
 import { PATH_AUTH } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   display: 'flex',
@@ -21,8 +15,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   alignItems: 'center',
   padding: theme.spacing(12, 0),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function VerifyCode() {
   return (

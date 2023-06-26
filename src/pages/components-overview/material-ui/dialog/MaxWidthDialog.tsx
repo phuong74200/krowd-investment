@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// material
 import {
   Box,
   Button,
@@ -15,9 +14,7 @@ import {
   MenuItem,
   Select,
   Switch,
-} from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
 
 export default function MaxWidthDialog() {
   const [open, setOpen] = useState(false);

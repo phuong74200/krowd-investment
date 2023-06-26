@@ -1,13 +1,9 @@
 import { Link as RouterLink } from 'react-router-dom';
-// material
-import { Box, Button, Container, Typography } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Box, Button, Container, Typography } from '@mui/material';
+import { styled } from '@mui/material
 
 import { SeverErrorIllustration } from '../assets';
-// components
 import Page from '../components/Page';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   display: 'flex',
@@ -16,8 +12,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(15),
   paddingBottom: theme.spacing(10),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Page500() {
   return (

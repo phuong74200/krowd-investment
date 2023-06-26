@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import {
   FormControl,
   FormHelperText,
@@ -9,16 +12,10 @@ import {
   OutlinedInput,
   Stack,
   TextField,
-} from '@material-ui/core';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-// material
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
+} from '@mui/material';
 
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const CURRENCIES = [
   { value: 'USD', label: '$' },
@@ -30,8 +27,6 @@ const CURRENCIES = [
 const style = {
   '& > *': { my: '8px !important' },
 };
-
-// ----------------------------------------------------------------------
 
 interface State {
   amount: string;

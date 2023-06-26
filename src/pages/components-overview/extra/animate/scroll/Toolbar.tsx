@@ -1,12 +1,8 @@
 import refreshFill from '@iconify/icons-eva/refresh-fill';
 import { Icon } from '@iconify/react';
-// material
-import { Paper } from '@material-ui/core';
+import { Paper } from '@mui/material';
 
-// components
 import { MIconButton } from '../../../../../components/@material-extend';
-
-// ----------------------------------------------------------------------
 
 type ToolbarProps = {
   onRefresh: VoidFunction;

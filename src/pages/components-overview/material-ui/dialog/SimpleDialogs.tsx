@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import AddIcon from '@material-ui/icons/Add';
+import PersonIcon from '@material-ui/icons/Person';
 import {
   Avatar,
   Box,
@@ -10,12 +12,7 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
-} from '@material-ui/core';
-// material
-import AddIcon from '@material-ui/icons/Add';
-import PersonIcon from '@material-ui/icons/Person';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 

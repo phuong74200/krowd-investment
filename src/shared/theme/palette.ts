@@ -1,7 +1,5 @@
 import { alpha } from '@mui/material';
 
-// ----------------------------------------------------------------------
-
 function createGradient(color1: string, color2: string) {
   return `linear-gradient(to bottom, ${color1}, ${color2})`;
 }
@@ -48,7 +46,6 @@ declare module '@mui/material' {
   }
 }
 
-// SETUP COLORS
 const PRIMARY = {
   lighter: '#C8FACD',
   light: '#5BE584',

@@ -1,4 +1,3 @@
-// material
 import {
   Button,
   DialogActions,
@@ -6,14 +5,11 @@ import {
   DialogContentText,
   DialogTitle,
   Paper,
-} from '@material-ui/core';
+} from '@mui/material';
 
-// components
 import { DialogAnimate } from '../../../../../components/animate';
 //
 import getVariant from '../getVariant';
-// ----------------------------------------------------------------------
-
 type ContainerViewProps = {
   isOpen: boolean;
   onOpen: VoidFunction;

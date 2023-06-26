@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Box, Container, Rating, Stack } from '@material-ui/core';
-import { IconContainerProps } from '@material-ui/core/Rating';
-import { styled } from '@material-ui/core/styles';
-// material
+import { Box, Container, Rating, Stack } from '@mui/material';
+import { IconContainerProps } from '@mui/material/Rating';
+import { styled } from '@mui/material
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
 import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
@@ -12,14 +11,10 @@ import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfie
 import { withStyles } from '@material-ui/styles';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const labels: { [index: string]: string } = {
   0.5: 'Useless',
@@ -79,8 +74,6 @@ const StyledRating = withStyles({
   iconFilled: { color: '#FF4842' },
   iconHover: { color: '#B72136' },
 })(Rating);
-
-// ----------------------------------------------------------------------
 
 function IconContainer(props: IconContainerProps) {
   const { value, ...other } = props;

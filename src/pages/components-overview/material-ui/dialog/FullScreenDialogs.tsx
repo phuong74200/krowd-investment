@@ -1,4 +1,5 @@
 import { forwardRef, useState } from 'react';
+import CloseIcon from '@material-ui/icons/Close';
 import {
   AppBar,
   Button,
@@ -11,12 +12,9 @@ import {
   Slide,
   Toolbar,
   Typography,
-} from '@material-ui/core';
-import { TransitionProps } from '@material-ui/core/transitions';
-// material
-import CloseIcon from '@material-ui/icons/Close';
+} from '@mui/material';
+import { TransitionProps } from '@mui/material/transitions';
 
-// ----------------------------------------------------------------------
 const Transition = forwardRef(
   (
     props: TransitionProps & {

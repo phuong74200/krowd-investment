@@ -1,21 +1,16 @@
-// material
 import {
   Box,
   Container,
   Grid,
   Typography,
   useMediaQuery,
-} from '@material-ui/core';
-import { styled, useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled, useTheme } from '@mui/material
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const TYPOGRAPHYS = [
   { name: 'h1. Heading', variant: 'h1' },
@@ -59,8 +54,6 @@ const RowContentStyle = styled('div')({
   width: '100%',
   maxWidth: 720,
 });
-
-// ----------------------------------------------------------------------
 
 function remToPx(value: string) {
   return Math.round(parseFloat(value) * 16);

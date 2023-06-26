@@ -1,6 +1,5 @@
 import { useState } from 'react';
-// material
-import { Card, Grid } from '@material-ui/core';
+import { Card, Grid } from '@mui/material';
 
 import ControlPanel from '../ControlPanel';
 
@@ -8,8 +7,6 @@ import ContainerView from './ContainerView';
 import Toolbar from './Toolbar';
 //
 import variantTypes from './types';
-
-// ----------------------------------------------------------------------
 
 export default function Inview() {
   const [count, setCount] = useState(0);

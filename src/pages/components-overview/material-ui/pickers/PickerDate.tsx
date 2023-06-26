@@ -1,18 +1,15 @@
 import { useState } from 'react';
-// material
-import { Stack, TextField } from '@material-ui/core';
 import {
   DatePicker,
   DesktopDatePicker,
   MobileDatePicker,
   StaticDatePicker,
 } from '@material-ui/lab';
+import { Stack, TextField } from '@mui/material';
 import isWeekend from 'date-fns/isWeekend';
 
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 export default function PickerDate() {
   const [value, setValue] = useState<Date | null>(new Date());

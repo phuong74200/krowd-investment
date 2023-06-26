@@ -18,8 +18,8 @@ import {
   ListSubheader,
   Paper,
   Switch,
-} from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 import BluetoothIcon from '@material-ui/icons/Bluetooth';
 import CommentIcon from '@material-ui/icons/Comment';
@@ -28,21 +28,16 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import ImageIcon from '@material-ui/icons/Image';
 import InboxIcon from '@material-ui/icons/Inbox';
-// material
 import SendIcon from '@material-ui/icons/Send';
 import StarBorder from '@material-ui/icons/StarBorder';
 import WifiIcon from '@material-ui/icons/Wifi';
 import WorkIcon from '@material-ui/icons/Work';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
@@ -53,8 +48,6 @@ const ListWrapperStyle = styled(Paper)(({ theme }) => ({
   width: '100%',
   border: `solid 1px ${theme.palette.divider}`,
 }));
-
-// ----------------------------------------------------------------------
 
 function ListItemLink(props: ListItemButtonProps<'a', { button?: true }>) {
   return <ListItemButton component="a" {...props} />;

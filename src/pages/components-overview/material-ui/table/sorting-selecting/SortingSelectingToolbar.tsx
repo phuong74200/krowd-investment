@@ -1,10 +1,8 @@
 import trash2Fill from '@iconify/icons-eva/trash-2-fill';
 import roundFilterList from '@iconify/icons-ic/round-filter-list';
 import { Icon } from '@iconify/react';
-import { IconButton, Toolbar, Tooltip, Typography } from '@material-ui/core';
-import { styled, useTheme } from '@material-ui/core/styles';
-
-// ----------------------------------------------------------------------
+import { IconButton, Toolbar, Tooltip, Typography } from '@mui/material';
+import { styled, useTheme } from '@mui/material
 
 const RootStyle = styled(Toolbar)(({ theme }) => ({
   height: 96,
@@ -12,8 +10,6 @@ const RootStyle = styled(Toolbar)(({ theme }) => ({
   justifyContent: 'space-between',
   padding: theme.spacing(0, 1, 0, 3),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function SortingSelectingToolbar({
   numSelected,

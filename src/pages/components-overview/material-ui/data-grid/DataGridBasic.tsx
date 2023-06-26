@@ -1,14 +1,10 @@
 import moreVerticalFill from '@iconify/icons-eva/more-vertical-fill';
 import { Icon } from '@iconify/react';
-import { Box } from '@material-ui/core';
-// material
 import { DataGrid, GridColDef } from '@material-ui/data-grid';
+import { Box } from '@mui/material';
 import faker from 'faker';
 
-// components
 import { MIconButton } from '../../../../components/@material-extend';
-
-// ----------------------------------------------------------------------
 
 const columns: GridColDef[] = [
   {

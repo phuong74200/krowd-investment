@@ -1,15 +1,10 @@
-// material
-import { Box, Card, CardContent, Container } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Box, Card, CardContent, Container } from '@mui/material';
+import { styled } from '@mui/material
 
 import CopyClipboard from '../../../components/CopyClipboard';
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),

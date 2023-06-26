@@ -1,14 +1,11 @@
 import { useState } from 'react';
-// material
-import { Card, Grid } from '@material-ui/core';
+import { Card, Grid } from '@mui/material';
 
 import ControlPanel from '../ControlPanel';
 
 import ContainerView from './ContainerView';
 //
 import variantTypes from './types';
-
-// ----------------------------------------------------------------------
 
 export default function DialogView() {
   const [open, setOpen] = useState(false);

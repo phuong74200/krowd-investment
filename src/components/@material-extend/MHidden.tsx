@@ -1,8 +1,5 @@
 import { ReactNode } from 'react';
-// material
 import { Breakpoint, Theme, useMediaQuery } from '@mui/material';
-
-// ----------------------------------------------------------------------
 
 type MHiddenProps = {
   children: ReactNode;

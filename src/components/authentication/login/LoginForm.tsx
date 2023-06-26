@@ -6,7 +6,6 @@ import eyeFill from '@iconify/icons-eva/eye-fill';
 import eyeOffFill from '@iconify/icons-eva/eye-off-fill';
 import { Icon } from '@iconify/react';
 import { LoadingButton } from '@mui/lab';
-// material
 import {
   Alert,
   Checkbox,
@@ -21,10 +20,7 @@ import { closeSnackbar, enqueueSnackbar } from 'notistack';
 
 import { MIconButton } from '@/components/@material-extend';
 
-// routes
 import { PATH_AUTH } from '../../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 type userLoginForm = {
   username: string;

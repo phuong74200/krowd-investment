@@ -7,24 +7,17 @@ import {
   Container,
   Grid,
   Skeleton,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 import mapboxgl from 'mapbox-gl';
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 import { cities as CITIES } from '../../../components/map/assets/cities';
 import { countries as COUNTRIES } from '../../../components/map/assets/countries';
-// components
 import Page from '../../../components/Page';
 //
 import { mapConfig } from '../../../config';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
-
-// ----------------------------------------------------------------------
-
-// FIX DISPLAY ERROR ON PRODUCTION
 
 // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
@@ -62,8 +55,6 @@ const MapWrapperStyle = styled('div')(({ theme }) => ({
     display: 'none',
   },
 }));
-
-// ----------------------------------------------------------------------
 
 const MapHeatmap = lazy(() => import('../../../components/map/map-heatmap'));
 const MapGeojson = lazy(() => import('../../../components/map/map-geojson'));

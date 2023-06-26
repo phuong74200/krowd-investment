@@ -1,16 +1,13 @@
 import { useState } from 'react';
-// material
-import { Stack, TextField } from '@material-ui/core';
 import {
   DateTimePicker,
   DesktopDateTimePicker,
   MobileDateTimePicker,
 } from '@material-ui/lab';
+import { Stack, TextField } from '@mui/material';
 
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 export default function PickerDateTime() {
   const [value, setValue] = useState<Date | null>(new Date());

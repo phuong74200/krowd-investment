@@ -6,23 +6,16 @@ import {
   Link,
   Tooltip,
   Typography,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 import { capitalCase } from 'change-case';
 
 import { MHidden } from '../../components/@material-extend';
 import { RegisterForm } from '../../components/authentication/register';
-// components
 import Page from '../../components/Page';
-// hooks
 import useAuth from '../../hooks/useAuth';
-// layouts
 import AuthLayout from '../../layouts/AuthLayout';
-// routes
 import { PATH_AUTH } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
@@ -48,8 +41,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
   justifyContent: 'center',
   padding: theme.spacing(12, 0),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Register() {
   const { method } = useAuth();

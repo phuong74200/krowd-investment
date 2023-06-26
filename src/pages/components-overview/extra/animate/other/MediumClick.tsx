@@ -1,12 +1,8 @@
 import plusFill from '@iconify/icons-eva/plus-fill';
 import { Icon } from '@iconify/react';
-// material
-import { Button, Fab, IconButton } from '@material-ui/core';
+import { Button, Fab, IconButton } from '@mui/material';
 
-// components
 import { ButtonAnimate } from '../../../../../components/animate';
-
-// ----------------------------------------------------------------------
 
 export default function MediumClick() {
   return (

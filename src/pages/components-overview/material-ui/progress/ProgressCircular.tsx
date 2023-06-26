@@ -1,10 +1,7 @@
-// material
-import { CircularProgress, Grid, Paper } from '@material-ui/core';
+import { CircularProgress, Grid, Paper } from '@mui/material';
 
 //
 import { Label } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   minHeight: 160,
@@ -14,8 +11,6 @@ const style = {
   justifyContent: 'center',
   '& > *': { m: 1 },
 } as const;
-
-// ----------------------------------------------------------------------
 
 type CircularProps = {
   progress: number;

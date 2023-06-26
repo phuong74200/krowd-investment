@@ -1,6 +1,4 @@
-import { Autocomplete, Box, TextField } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+import { Autocomplete, Box, TextField } from '@mui/material';
 
 function countryToFlag(isoCode: string) {
   return typeof String.fromCodePoint !== 'undefined'

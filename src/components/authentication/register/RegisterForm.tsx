@@ -3,26 +3,22 @@ import closeFill from '@iconify/icons-eva/close-fill';
 import eyeFill from '@iconify/icons-eva/eye-fill';
 import eyeOffFill from '@iconify/icons-eva/eye-off-fill';
 import { Icon } from '@iconify/react';
-// material
+import { LoadingButton } from '@material-ui/lab';
 import {
   Alert,
   IconButton,
   InputAdornment,
   Stack,
   TextField,
-} from '@material-ui/core';
-import { LoadingButton } from '@material-ui/lab';
+} from '@mui/material';
 import { Form, FormikProvider, useFormik } from 'formik';
 import { useSnackbar } from 'notistack5';
 import * as Yup from 'yup';
 
-// hooks
 import useAuth from '../../../hooks/useAuth';
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
 //
 import { MIconButton } from '../../@material-extend';
-
-// ----------------------------------------------------------------------
 
 type InitialValues = {
   email: string;

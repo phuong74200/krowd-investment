@@ -11,18 +11,13 @@ import {
   OutlinedInput,
   Tooltip,
   Typography,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 
 import { ComingSoonIllustration } from '../assets';
-// components
 import { MIconButton } from '../components/@material-extend';
 import Page from '../components/Page';
-// hooks
 import useCountdown from '../hooks/useCountdown';
-
-// ----------------------------------------------------------------------
 
 const SOCIALS = [
   {
@@ -64,8 +59,6 @@ const SeparatorStyle = styled(Typography)(({ theme }) => ({
     margin: theme.spacing(0, 2.5),
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function ComingSoon() {
   const countdown = useCountdown(new Date('07/07/2022 21:30'));

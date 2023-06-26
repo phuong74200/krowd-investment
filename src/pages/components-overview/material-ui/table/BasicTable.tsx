@@ -1,4 +1,3 @@
-// material
 import {
   Table,
   TableBody,
@@ -6,12 +5,9 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from '@material-ui/core';
+} from '@mui/material';
 
-// components
 import Scrollbar from '../../../../components/Scrollbar';
-
-// ----------------------------------------------------------------------
 
 function createData(
   name: string,
@@ -30,8 +26,6 @@ const BASIC_TABLE = [
   createData('Cupcake', 305, 3.7, 67, 4.3),
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
-
-// ----------------------------------------------------------------------
 
 export default function BasicTable() {
   return (

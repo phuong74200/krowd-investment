@@ -1,13 +1,9 @@
-// material
-import { Fab, Grid } from '@material-ui/core';
 import AlarmIcon from '@material-ui/icons/Alarm';
+import { Fab, Grid } from '@mui/material';
 
-// components
 import { MFab } from '../../../../components/@material-extend';
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   display: 'flex',

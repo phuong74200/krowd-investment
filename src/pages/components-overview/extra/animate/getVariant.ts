@@ -1,7 +1,6 @@
 import { Variants } from 'framer-motion';
 
 import {
-  // Bounce
   varBounceIn,
   varBounceInDown,
   varBounceInLeft,
@@ -16,7 +15,6 @@ import {
   varColor3x,
   varColor4x,
   varColor5x,
-  // Fade
   varFadeIn,
   varFadeInDown,
   varFadeInLeft,
@@ -27,7 +25,6 @@ import {
   varFadeOutLeft,
   varFadeOutRight,
   varFadeOutUp,
-  // Flip
   varFlipInX,
   varFlipInY,
   varFlipOutX,
@@ -35,16 +32,13 @@ import {
   varKenburnsBottom,
   varKenburnsLeft,
   varKenburnsRight,
-  // Background
   varKenburnsTop,
   varPanBottom,
   varPanLeft,
   varPanRight,
   varPanTop,
-  // Rotate
   varRotateIn,
   varRotateOut,
-  // Scale
   varScaleInX,
   varScaleInY,
   varScaleOutX,
@@ -52,13 +46,11 @@ import {
   varSlideInDown,
   varSlideInLeft,
   varSlideInRight,
-  // Slide
   varSlideInUp,
   varSlideOutDown,
   varSlideOutLeft,
   varSlideOutRight,
   varSlideOutUp,
-  // Zoom
   varZoomIn,
   varZoomInDown,
   varZoomInLeft,
@@ -71,12 +63,9 @@ import {
   varZoomOutUp,
 } from '../../../../components/animate';
 
-// ----------------------------------------------------------------------
-
 export default function getVariant(variant: string): Variants | undefined {
   let value;
   switch (variant) {
-    // Slide
     case 'slideInUp':
       value = varSlideInUp;
       break;
@@ -101,7 +90,6 @@ export default function getVariant(variant: string): Variants | undefined {
     case 'slideOutRight':
       value = varSlideOutRight;
       break;
-    // Fade
     case 'fadeIn':
       value = varFadeIn;
       break;
@@ -132,7 +120,6 @@ export default function getVariant(variant: string): Variants | undefined {
     case 'fadeOutRight':
       value = varFadeOutRight;
       break;
-    // Zoom
     case 'zoomIn':
       value = varZoomIn;
       break;
@@ -163,7 +150,6 @@ export default function getVariant(variant: string): Variants | undefined {
     case 'zoomOutDown':
       value = varZoomOutDown;
       break;
-    // Bounce
     case 'bounceIn':
       value = varBounceIn;
       break;
@@ -194,7 +180,6 @@ export default function getVariant(variant: string): Variants | undefined {
     case 'bounceOutRight':
       value = varBounceOutRight;
       break;
-    // Flip
     case 'flipInX':
       value = varFlipInX;
       break;
@@ -207,7 +192,6 @@ export default function getVariant(variant: string): Variants | undefined {
     case 'flipOutY':
       value = varFlipOutY;
       break;
-    // Scale
     case 'scaleInX':
       value = varScaleInX;
       break;
@@ -220,14 +204,12 @@ export default function getVariant(variant: string): Variants | undefined {
     case 'scaleOutY':
       value = varScaleOutY;
       break;
-    // Rotate
     case 'rotateIn':
       value = varRotateIn;
       break;
     case 'rotateOut':
       value = varRotateOut;
       break;
-    // Background
     case 'kenburnsTop':
       value = varKenburnsTop;
       break;

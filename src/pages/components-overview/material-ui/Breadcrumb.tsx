@@ -1,4 +1,3 @@
-// material
 import {
   Box,
   Breadcrumbs,
@@ -6,22 +5,18 @@ import {
   Grid,
   Link,
   Typography,
-} from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 import GrainIcon from '@material-ui/icons/Grain';
 import HomeIcon from '@material-ui/icons/Home';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 
 import { MBreadcrumbs } from '../../../components/@material-extend';
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { Block } from '../Block';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),

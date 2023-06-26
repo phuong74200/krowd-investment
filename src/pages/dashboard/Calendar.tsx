@@ -19,9 +19,8 @@ import {
   Container,
   DialogTitle,
   useMediaQuery,
-} from '@material-ui/core';
-// material
-import { useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { useTheme } from '@mui/material
 import { useSnackbar } from 'notistack5';
 
 // @types
@@ -33,9 +32,7 @@ import {
 } from '../../components/_dashboard/calendar';
 import { DialogAnimate } from '../../components/animate';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import {
   closeModal,
@@ -45,12 +42,8 @@ import {
   selectRange,
   updateEvent,
 } from '../../redux/slices/calendar';
-// redux
 import { RootState, useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const selectedEventSelector = (state: RootState) => {
   const { events, selectedEventId } = state.calendar;

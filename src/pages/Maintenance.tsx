@@ -1,14 +1,10 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { Button, Container, Typography } from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+import { Button, Container, Typography } from '@mui/material';
+import { styled } from '@mui/material
 
 //
 import { MaintenanceIllustration } from '../assets';
-// components
 import Page from '../components/Page';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   minHeight: '100%',
@@ -17,8 +13,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(15),
   paddingBottom: theme.spacing(10),
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Maintenance() {
   return (

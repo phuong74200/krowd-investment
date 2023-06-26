@@ -1,12 +1,9 @@
-// material
-import { Button, Grid } from '@material-ui/core';
 import AlarmIcon from '@material-ui/icons/Alarm';
 import { LoadingButton } from '@material-ui/lab';
+import { Button, Grid } from '@mui/material';
 
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   display: 'flex',

@@ -1,10 +1,7 @@
 import { ReactNode } from 'react';
-import { Box, Card, CardHeader, Typography } from '@material-ui/core';
-// material
-import { Theme } from '@material-ui/core/styles';
+import { Box, Card, CardHeader, Typography } from '@mui/material';
+import { Theme } from '@mui/material
 import { SxProps } from '@material-ui/system';
-
-// ----------------------------------------------------------------------
 
 type LabelProps = {
   title: string;

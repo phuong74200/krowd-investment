@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { Autocomplete, TextField, Typography } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+import { Autocomplete, TextField, Typography } from '@mui/material';
 
 type ControllableStatesProps = {
   options: string[];

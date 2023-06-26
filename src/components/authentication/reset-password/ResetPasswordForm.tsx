@@ -1,14 +1,10 @@
-// material
-import { Alert, Stack, TextField } from '@material-ui/core';
 import { LoadingButton } from '@material-ui/lab';
+import { Alert, Stack, TextField } from '@mui/material';
 import { Form, FormikProvider, useFormik } from 'formik';
 import * as Yup from 'yup';
 
-// hooks
 import useAuth from '../../../hooks/useAuth';
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
-
-// ----------------------------------------------------------------------
 
 type InitialValues = {
   email: string;

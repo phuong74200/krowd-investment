@@ -1,13 +1,9 @@
-// material
-import { Grid, IconButton } from '@material-ui/core';
 import AlarmIcon from '@material-ui/icons/Alarm';
+import { Grid, IconButton } from '@mui/material';
 
-// components
 import { MIconButton } from '../../../../components/@material-extend';
 //
 import { Block } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   display: 'flex',

@@ -1,6 +1,4 @@
-import { Theme } from '@material-ui/core/styles';
-
-// ----------------------------------------------------------------------
+import { Theme } from '@mui/material';
 
 export default function Avatar(theme: Theme) {
   return {

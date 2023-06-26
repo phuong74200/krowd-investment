@@ -1,8 +1,6 @@
 import closeCircleFill from '@iconify/icons-eva/close-circle-fill';
 import { Icon } from '@iconify/react';
-import { Theme } from '@material-ui/core/styles';
-
-// ----------------------------------------------------------------------
+import { Theme } from '@mui/material';
 
 export default function Chip(theme: Theme) {
   return {

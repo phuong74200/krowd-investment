@@ -1,11 +1,8 @@
-// material
-import { Box, Paper } from '@material-ui/core';
+import { Box, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 
 //
 import getVariant from '../getVariant';
-
-// ----------------------------------------------------------------------
 
 type ContainerViewProps = {
   selectVariant: string;

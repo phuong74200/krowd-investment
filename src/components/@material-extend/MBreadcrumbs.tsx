@@ -9,8 +9,6 @@ import {
 } from '@mui/material';
 import { last } from 'lodash';
 
-// ----------------------------------------------------------------------
-
 const Separator = (
   <Box
     component="span"

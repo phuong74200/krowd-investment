@@ -1,13 +1,9 @@
-// material
-import { Box, Paper } from '@material-ui/core';
+import { Box, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 
-// components
 import { MotionContainer } from '../../../../../components/animate';
 //
 import getVariant from '../getVariant';
-
-// ----------------------------------------------------------------------
 
 const TEXT = 'Minimals';
 

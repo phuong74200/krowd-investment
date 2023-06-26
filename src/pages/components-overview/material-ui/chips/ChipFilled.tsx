@@ -1,12 +1,9 @@
-// material
-import { Avatar, Chip, Paper, Stack } from '@material-ui/core';
 import DoneIcon from '@material-ui/icons/Done';
 import FaceIcon from '@material-ui/icons/Face';
+import { Avatar, Chip, Paper, Stack } from '@mui/material';
 
 //
 import { Label } from '../../Block';
-
-// ----------------------------------------------------------------------
 
 const style = {
   p: 2,
@@ -16,8 +13,6 @@ const style = {
   flexWrap: 'wrap',
   '& > *': { m: '8px !important' },
 } as const;
-
-// ----------------------------------------------------------------------
 
 export default function ChipFilled() {
   const handleDelete = () => {

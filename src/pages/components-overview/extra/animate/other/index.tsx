@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import refreshFill from '@iconify/icons-eva/refresh-fill';
 import { Icon } from '@iconify/react';
-// material
-import { Box, Card, CardContent, Grid } from '@material-ui/core';
+import { Box, Card, CardContent, Grid } from '@mui/material';
 
-// components
 import { MIconButton } from '../../../../../components/@material-extend';
 import Block from '../../../../../components/Block';
 
@@ -12,8 +10,6 @@ import Block from '../../../../../components/Block';
 import Logo from './Logo';
 import MediumClick from './MediumClick';
 import SmallClick from './SmallClick';
-
-// ----------------------------------------------------------------------
 
 export default function Other() {
   const [count, setCount] = useState(0);

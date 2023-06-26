@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-// material
 import {
   Box,
   Card,
@@ -9,7 +8,7 @@ import {
   Pagination,
   Skeleton,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import { sentenceCase } from 'change-case';
 
 // @types
@@ -23,17 +22,11 @@ import {
 } from '../../components/_dashboard/blog';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import Markdown from '../../components/Markdown';
-// components
 import Page from '../../components/Page';
-// hooks
 import useSettings from '../../hooks/useSettings';
 import { getPost, getRecentPosts } from '../../redux/slices/blog';
-// redux
 import { useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const SkeletonLoad = (
   <>

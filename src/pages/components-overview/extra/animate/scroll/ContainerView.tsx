@@ -1,13 +1,9 @@
-// material
-import { Box, Paper, Typography } from '@material-ui/core';
+import { Box, Paper, Typography } from '@mui/material';
 
 import { MotionInView } from '../../../../../components/animate';
-// components
 import Scrollbar from '../../../../../components/Scrollbar';
 //
 import getVariant from '../getVariant';
-
-// ----------------------------------------------------------------------
 
 type ContainerViewProps = {
   selectVariant: string;

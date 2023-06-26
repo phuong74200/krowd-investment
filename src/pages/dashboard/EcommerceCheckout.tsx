@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import checkmarkFill from '@iconify/icons-eva/checkmark-fill';
 import { Icon } from '@iconify/react';
-// material
+import { withStyles } from '@material-ui/styles';
 import {
   Box,
   Container,
@@ -10,8 +10,7 @@ import {
   StepConnector,
   StepLabel,
   Stepper,
-} from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
+} from '@mui/material';
 
 // @types
 import { ProductState } from '../../@types/products';
@@ -22,18 +21,12 @@ import {
   CheckoutPayment,
 } from '../../components/_dashboard/e-commerce/checkout';
 import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../components/Page';
-// hooks
 import useIsMountedRef from '../../hooks/useIsMountedRef';
 import useSettings from '../../hooks/useSettings';
 import { createBilling, getCart } from '../../redux/slices/product';
-// redux
 import { useDispatch, useSelector } from '../../redux/store';
-// routes
 import { PATH_DASHBOARD } from '../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const STEPS = ['Cart', 'Billing & address', 'Payment'];
 

@@ -1,6 +1,5 @@
-// material
-import { Divider } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Divider } from '@mui/material';
+import { styled } from '@mui/material
 
 import {
   AboutHero,
@@ -9,10 +8,7 @@ import {
   AboutVision,
   AboutWhat,
 } from '../components/_external-pages/about';
-// components
 import Page from '../components/Page';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(8),
@@ -20,8 +16,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
     paddingTop: theme.spacing(11),
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function About() {
   return (

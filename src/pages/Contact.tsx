@@ -1,16 +1,12 @@
-// material
-import { Container, Grid } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+import { Container, Grid } from '@mui/material';
+import { styled } from '@mui/material
 
 import {
   ContactForm,
   ContactHero,
   ContactMap,
 } from '../components/_external-pages/contact';
-// components
 import Page from '../components/Page';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(8),
@@ -18,8 +14,6 @@ const RootStyle = styled(Page)(({ theme }) => ({
     paddingTop: theme.spacing(11),
   },
 }));
-
-// ----------------------------------------------------------------------
 
 export default function Contact() {
   return (

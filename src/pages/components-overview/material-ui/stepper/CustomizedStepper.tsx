@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import Check from '@material-ui/icons/Check';
+import GroupAddIcon from '@material-ui/icons/GroupAdd';
+import SettingsIcon from '@material-ui/icons/Settings';
+import VideoLabelIcon from '@material-ui/icons/VideoLabel';
+import { withStyles } from '@material-ui/styles';
 import {
   Box,
   Button,
@@ -8,16 +13,8 @@ import {
   StepLabel,
   Stepper,
   Typography,
-} from '@material-ui/core';
-import { StepIconProps } from '@material-ui/core/StepIcon';
-// material
-import Check from '@material-ui/icons/Check';
-import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import SettingsIcon from '@material-ui/icons/Settings';
-import VideoLabelIcon from '@material-ui/icons/VideoLabel';
-import { withStyles } from '@material-ui/styles';
-
-// ----------------------------------------------------------------------
+} from '@mui/material';
+import { StepIconProps } from '@mui/material/StepIcon';
 
 const QontoConnector = withStyles({
   alternativeLabel: {

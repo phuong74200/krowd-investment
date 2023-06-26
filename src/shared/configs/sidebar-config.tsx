@@ -1,12 +1,8 @@
-// routes
-// components
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 import { PATH_DASHBOARD } from '@/router/paths';
 import Label from '@/shared/components/label';
 import SvgIconStyle from '@/shared/components/svg-icon-style';
-
-// ----------------------------------------------------------------------
 
 const getIcon = (name: string) => (
   <SvgIconStyle
@@ -29,8 +25,6 @@ const ICONS = {
 };
 
 const sidebarConfig = [
-  // GENERAL
-  // ----------------------------------------------------------------------
   {
     subheader: 'general',
     items: [
@@ -52,8 +46,6 @@ const sidebarConfig = [
     ],
   },
 
-  // MANAGEMENT
-  // ----------------------------------------------------------------------
   {
     subheader: 'management',
     items: [
@@ -102,8 +94,6 @@ const sidebarConfig = [
     ],
   },
 
-  // APP
-  // ----------------------------------------------------------------------
   {
     subheader: 'app',
     items: [

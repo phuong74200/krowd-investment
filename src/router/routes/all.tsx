@@ -1,4 +1,5 @@
 import Login from '@/modules/auth/page/Login';
+import DashBoardPage from '@/modules/dashboard/page';
 import DashboardLayout from '@/modules/layout/dash-board';
 import LandingPage from '@/modules/seo/pages/lading';
 import { AuthRouteObject } from '@/types';
@@ -15,7 +16,7 @@ export const allRoute: AuthRouteObject[] = [
     children: [
       {
         path: '/nav',
-        element: <h1>Hello world</h1>,
+        element: <DashBoardPage />,
       },
     ],
   },

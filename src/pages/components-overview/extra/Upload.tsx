@@ -9,24 +9,18 @@ import {
   Stack,
   Switch,
   Typography,
-} from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
 import {
   UploadAvatar,
   UploadMultiFile,
   UploadSingleFile,
 } from '../../../components/upload';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
-// utils
 import { fData } from '../../../utils/formatNumber';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),

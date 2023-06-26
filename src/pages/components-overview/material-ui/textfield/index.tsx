@@ -1,13 +1,10 @@
 import { useState } from 'react';
-import { Box, Container, Tab } from '@material-ui/core';
-// material
-import { styled } from '@material-ui/core/styles';
+import { Box, Container, Tab } from '@mui/material';
+import { styled } from '@mui/material
 import { TabContext, TabList, TabPanel } from '@material-ui/lab';
 
 import HeaderBreadcrumbs from '../../../../components/HeaderBreadcrumbs';
-// material
 import Page from '../../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../../routes/paths';
 
 //
@@ -15,15 +12,11 @@ import Filled from './Filled';
 import Outlined from './Outlined';
 import Standard from './Standard';
 
-// ----------------------------------------------------------------------
-
 const TEXTFIELDS = [
   { name: 'Filled', component: <Filled /> },
   { name: 'Standard', component: <Standard /> },
   { name: 'Outlined', component: <Outlined /> },
 ];
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),
@@ -37,9 +30,7 @@ export default function TextFieldComponent() {
     setValue(newValue);
   };
 
-  // ----------------------------------------------------------------------
-
-  return (
+    return (
     <RootStyle title="Components: TextField | Minimal-UI">
       <Box
         sx={{

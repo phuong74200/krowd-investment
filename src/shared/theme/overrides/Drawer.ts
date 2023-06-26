@@ -1,6 +1,4 @@
-import { alpha, Theme } from '@material-ui/core';
-
-// ----------------------------------------------------------------------
+import { alpha, Theme } from '@mui/material';
 
 export default function Drawer(theme: Theme) {
   const isLight = theme.palette.mode === 'light';

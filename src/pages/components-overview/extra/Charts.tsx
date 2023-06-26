@@ -1,4 +1,3 @@
-// material
 import {
   Box,
   Card,
@@ -6,8 +5,8 @@ import {
   CardHeader,
   Container,
   Grid,
-} from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
+} from '@mui/material';
+import { styled } from '@mui/material
 
 import {
   ChartArea,
@@ -24,12 +23,8 @@ import {
   ChartsRadarBar,
 } from '../../../components/charts';
 import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
-// components
 import Page from '../../../components/Page';
-// routes
 import { PATH_PAGE } from '../../../routes/paths';
-
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   paddingTop: theme.spacing(11),

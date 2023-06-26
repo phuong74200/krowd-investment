@@ -1,7 +1,13 @@
 import { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 
+let token = '';
+
+export const setAuthToken = (authToken: string) => {
+  token = authToken;
+};
+
 export const onRequest = (config: InternalAxiosRequestConfig) => {
-  // Do something before sending the request
+  config.headers.set('Authorization', `Bearer ${token}`);
   return config;
 };
 

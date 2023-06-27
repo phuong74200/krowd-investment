@@ -9,6 +9,8 @@ import ThemeConfig from './shared/theme';
 import { browserRouter } from './router';
 
 import 'simplebar-react/dist/simplebar.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   return (

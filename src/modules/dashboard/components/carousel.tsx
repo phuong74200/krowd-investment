@@ -157,6 +157,7 @@ export default function AppFeatured() {
       </Slider>
 
       <CarouselControlsArrowsBasic1
+        data-id="carousel-controls-arrows-basic"
         onNext={handleNext}
         onPrevious={handlePrevious}
       />

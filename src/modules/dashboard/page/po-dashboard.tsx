@@ -4,6 +4,8 @@ import useSettings from '@/shared/hooks/use-settings';
 
 import Page from '../../../components/Page';
 import AppFeatured from '../components/carousel';
+import Wallet from '../components/wallet';
+import AppWelcome from '../components/welcome';
 
 export default function DashBoardPage() {
   const { themeStretch } = useSettings();
@@ -14,7 +16,7 @@ export default function DashBoardPage() {
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={8}>
-            <div style={{ background: 'red', height: 400 }}>asd</div>
+            <AppWelcome />
           </Grid>
 
           <Grid item xs={12} md={4}>
@@ -22,15 +24,34 @@ export default function DashBoardPage() {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            {/* <AppTotalActiveUsers /> */}
+            <Wallet percent={30} title="Temporary wallet" total={385000} />
           </Grid>
 
           <Grid item xs={12} md={4}>
-            {/* <AppTotalInstalled /> */}
+            <Wallet
+              percent={30}
+              title="General payment wallet"
+              total={385000}
+            />
           </Grid>
 
           <Grid item xs={12} md={4}>
-            {/* <AppTotalDownloads /> */}
+            <Wallet percent={30} title="Collection wallet" total={385000} />
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <Wallet
+              percent={30}
+              title="Project investment wallet"
+              total={385000}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Wallet
+              percent={30}
+              title="Project payment wallet"
+              total={385000}
+            />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>

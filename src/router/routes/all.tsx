@@ -2,6 +2,7 @@ import Login from '@/modules/auth/page/Login';
 import Register from '@/modules/auth/page/Register';
 import DashBoardPage from '@/modules/dashboard/page';
 import NavSection from '@/modules/layout/components/nav-section';
+import DashBoardPage from '@/modules/dashboard/page/po-dashboard';
 import DashboardLayout from '@/modules/layout/dash-board';
 import LandingPage from '@/modules/seo/pages/lading';
 import { AuthRouteObject } from '@/types';

@@ -20,7 +20,8 @@
       "typescript": {
         "alwaysTryTypes": true
       }
-    }
+    },
+    "import/ignore": ["react-apexcharts"]
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

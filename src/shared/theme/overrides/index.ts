@@ -25,28 +25,30 @@ import Input from './Input';
 import Link from './Link';
 import Lists from './Lists';
 import LoadingButton from './loading-button';
-import Menu from './menu';
-import Pagination from './pagination';
-import Paper from './paper';
-import Pickers from './pickers';
-import Popover from './popover';
-import Progress from './progress';
-import Radio from './radio';
-import Rating from './rating';
-import Select from './select';
-import Skeleton from './skeleton';
-import Slider from './slider';
+import Menu from './Menu';
+import Pagination from './Pagination';
+import Paper from './Paper';
+import Pickers from './Pickers';
+import Popover from './Popover';
+import Progress from './Progress';
+import Radio from './Radio';
+import Rating from './Rating';
+import Select from './Select';
+import Skeleton from './Skeleton';
+import Slider from './Slider';
 import Snackbar from './snack-bar';
-import Stepper from './stepper';
+import Stepper from './Stepper';
 import SvgIcon from './svg-icon';
-import Switch from './switch';
-import Table from './table';
-import Tabs from './tabs';
-import Timeline from './timeline';
+import Switch from './Switch';
+import Table from './Table';
+import Tabs from './Tabs';
+import Timeline from './Timeline';
 import ToggleButton from './toggle-button';
-import Tooltip from './tooltip';
+import Tooltip from './Tooltip';
 import TreeView from './tree-view';
-import Typography from './typography';
+import Typography from './Typography';
+
+// ----------------------------------------------------------------------
 
 export default function ComponentsOverrides(theme: Theme) {
   return merge(
@@ -62,17 +64,17 @@ export default function ComponentsOverrides(theme: Theme) {
     Badge(),
     Lists(theme),
     Table(theme),
-    Paper(theme),
+    Paper(),
     Alert(theme),
     Switch(theme),
-    Select(theme),
+    Select(),
     Button(theme),
     Rating(theme),
     Dialog(theme),
     Avatar(theme),
     Slider(theme),
     Drawer(theme),
-    Pickers(theme),
+    Pickers(),
     Stepper(theme),
     Tooltip(theme),
     Popover(theme),
@@ -95,6 +97,6 @@ export default function ComponentsOverrides(theme: Theme) {
     Autocomplete(theme),
     ControlLabel(theme),
     ToggleButton(theme),
-    LoadingButton(theme)
+    LoadingButton()
   );
 }

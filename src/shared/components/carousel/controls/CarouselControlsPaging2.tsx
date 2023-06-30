@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Box, BoxProps, styled } from '@mui/material';
 
-const RootStyle = styled(Box)(({ theme }) => ({
+const RootStyle = styled(Box)(() => ({
   display: 'flex',
   listStyle: 'none',
   justifyContent: 'center',

@@ -10,7 +10,6 @@ import {
 import { motion } from 'framer-motion';
 import NProgress from 'nprogress';
 
-//
 import Logo from './Logo';
 
 const nprogressStyle = makeStyles((theme: Theme) =>

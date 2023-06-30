@@ -1,4 +1,4 @@
-import { LoadingButton } from '@material-ui/lab';
+import { LoadingButton } from '@mui/lab';
 import { Alert, Stack, TextField } from '@mui/material';
 import { Form, FormikProvider, useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -42,7 +42,7 @@ export default function ResetPasswordForm({
           onGetEmail(formik.values.email);
           setSubmitting(false);
         }
-      } catch (error) {
+      } catch (error: any) {
         console.error(error);
         if (isMountedRef.current) {
           setErrors({ afterSubmit: error.message });

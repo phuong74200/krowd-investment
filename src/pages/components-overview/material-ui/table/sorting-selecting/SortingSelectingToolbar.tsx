@@ -1,8 +1,14 @@
 import trash2Fill from '@iconify/icons-eva/trash-2-fill';
 import roundFilterList from '@iconify/icons-ic/round-filter-list';
 import { Icon } from '@iconify/react';
-import { IconButton, Toolbar, Tooltip, Typography } from '@mui/material';
-import { styled, useTheme } from '@mui/material
+import {
+  IconButton,
+  styled,
+  Toolbar,
+  Tooltip,
+  Typography,
+  useTheme,
+} from '@mui/material';
 
 const RootStyle = styled(Toolbar)(({ theme }) => ({
   height: 96,

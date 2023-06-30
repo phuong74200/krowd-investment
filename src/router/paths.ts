@@ -4,6 +4,7 @@ function path(root: string, sublink: string) {
 
 const ROOTS_AUTH = '/auth';
 const ROOTS_DASHBOARD = '/dashboard';
+const ROOTS_PO = '/po';
 
 export const PATH_AUTH = {
   root: ROOTS_AUTH,
@@ -26,6 +27,10 @@ export const PATH_PAGE = {
   page404: '/404',
   page500: '/500',
   components: '/components',
+};
+
+export const PATH_PO = {
+  project: path(ROOTS_PO, '/project'),
 };
 
 export const PATH_DASHBOARD = {

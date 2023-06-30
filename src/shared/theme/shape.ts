@@ -1,9 +1,12 @@
+interface CustomShapeOptions {
+  borderRadius: number | string;
+  borderRadiusSm: number | string;
+  borderRadiusMd: number | string;
+}
+
 declare module '@mui/material/styles' {
   interface Theme {
-    shape: {
-      borderRadiusSm: number | string;
-      borderRadiusMd: number | string;
-    };
+    shape: CustomShapeOptions;
   }
 }
 

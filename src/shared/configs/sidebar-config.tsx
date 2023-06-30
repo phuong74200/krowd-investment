@@ -51,7 +51,7 @@ const sidebarConfig = [
     items: [
       // MANAGEMENT : USER
       {
-        title: 'user',
+        title: 'Project',
         path: PATH_DASHBOARD.user.root,
         icon: ICONS.user,
         children: [
